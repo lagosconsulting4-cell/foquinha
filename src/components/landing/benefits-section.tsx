@@ -8,7 +8,7 @@ import { SectionTracker } from "@/components/analytics/section-tracker"
 
 const benefits = [
   {
-    title: "Você envia um \"Oi\" no WhatsApp",
+    title: "Você envia um Oi no WhatsApp",
     description: "Começa na hora, sem conta nova e sem baixar aplicativo.",
     image: "https://i.ibb.co/S4h0cKw7/hero-e-Voc-envia-um-Oi-no-Whats-App.webp",
   },
@@ -66,7 +66,7 @@ export function BenefitsSection({ ctaHref }: BenefitsSectionProps) {
               Como a Foquinha funciona?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
-              Simples: mande um \"Oi\" no WhatsApp e tenha uma assistente que organiza compromissos, lembra das tarefas e mantém tudo no mesmo lugar.
+              Simples: mande um Oi no WhatsApp e tenha uma assistente que organiza compromissos, lembra das tarefas e mantém tudo no mesmo lugar.
             </p>
           </div>
 
