@@ -23,10 +23,9 @@ export function StickyCtaBar({ ctaHref }: StickyCtaBarProps) {
   }, [])
 
   const handleClick = () => {
-    // Extrai o campaign da URL
     const url = new URL(ctaHref)
-    const campaign = url.searchParams.get('utm_campaign') || 'unknown'
-    analytics.trackCheckoutClick('sticky_bar', campaign)
+    const campaign = url.searchParams.get("utm_campaign") || "unknown"
+    analytics.trackCheckoutClick("sticky_bar", campaign)
   }
 
   return (
@@ -41,10 +40,10 @@ export function StickyCtaBar({ ctaHref }: StickyCtaBarProps) {
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
             <div>
               <p className="text-sm font-bold text-white sm:text-base">
-                ⚡ Vagas limitadas
+                Assistente no WhatsApp pronta para usar
               </p>
               <p className="text-xs text-white/90 sm:text-sm">
-                As ativações são liberadas em lotes. Garanta seu acesso agora.
+                Novos acessos são liberados em lotes. Garanta o seu e comece a receber lembretes hoje.
               </p>
             </div>
           </div>
@@ -54,7 +53,7 @@ export function StickyCtaBar({ ctaHref }: StickyCtaBarProps) {
             onClick={handleClick}
             className="group flex items-center gap-2 whitespace-nowrap rounded-full bg-white px-4 py-2.5 text-xs font-bold uppercase tracking-wide text-[#128C7E] transition-all hover:scale-105 hover:bg-[#128C7E] hover:text-white hover:shadow-xl sm:px-6 sm:py-3 sm:text-sm"
           >
-            <span>Começar agora</span>
+            <span>Ativar agora</span>
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
           </a>
         </div>

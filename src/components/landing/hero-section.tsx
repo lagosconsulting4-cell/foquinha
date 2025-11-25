@@ -14,70 +14,70 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
         className="relative overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-8"
       >
         <div className="mx-auto max-w-4xl">
-        {/* Logo */}
-        <div className="mb-8 flex justify-center">
-          <Image
-            src="https://i.ibb.co/Kzr3VMvx/foquiai-logo.png"
-            alt="Foquinha IA"
-            width={80}
-            height={80}
-            className="object-contain"
-          />
-        </div>
-
-        {/* Badge */}
-        <div className="mb-8 flex justify-center">
-          <div className="inline-flex items-center rounded-full bg-secondary/10 px-5 py-2">
-            <span className="text-sm font-semibold text-secondary">
-              Conheça a Foquinha
-            </span>
-          </div>
-        </div>
-
-        {/* Headline Principal */}
-        <div className="mb-12 text-center">
-          <h1 className="mb-6 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
-            Você está exausto de tentar e nunca conseguir?
-          </h1>
-
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-600">
-            A Foquinha é a sua assistente pessoal inteligente que te ajuda a criar os hábitos que você sempre quis ter. Tudo isso direto no seu WhatsApp.
-          </p>
-        </div>
-
-        {/* Imagem WhatsApp - GRANDE */}
-        <div className="mb-12">
-          <div className="relative mx-auto max-w-sm">
+          {/* Logo */}
+          <div className="mb-8 flex justify-center">
             <Image
-              src="https://i.ibb.co/S4h0cKw7/hero-e-Voc-envia-um-Oi-no-Whats-App.webp"
-              alt="Interface da Foquinha IA no WhatsApp"
-              width={600}
-              height={1200}
-              className="w-full object-contain drop-shadow-2xl"
-              priority
+              src="https://i.ibb.co/Kzr3VMvx/foquiai-logo.png"
+              alt="Foquinha IA"
+              width={80}
+              height={80}
+              className="object-contain"
             />
           </div>
-          <p className="mt-6 text-center text-base font-semibold text-slate-700">
-            Sua assistente pessoal que cabe no bolso.
-          </p>
-        </div>
 
-        {/* CTA Principal */}
-        <div className="mb-6 flex justify-center">
-          <CtaButton
-            href={ctaHref}
-            label="Quero falar com a Foquinha"
-            trackingLocation="hero"
-            className="w-full rounded-xl bg-[#128C7E] px-8 py-4 text-center text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#0d6b5f] sm:w-auto"
-          />
-        </div>
+          {/* Badge */}
+          <div className="mb-8 flex justify-center">
+            <div className="inline-flex items-center rounded-full bg-secondary/10 px-5 py-2">
+              <span className="text-sm font-semibold text-secondary">
+                Assistente de organização no WhatsApp
+              </span>
+            </div>
+          </div>
 
-        {/* Garantia */}
-        <div className="text-center">
-          <p className="text-sm font-semibold text-secondary">
-            7 dias de garantia total.
-          </p>
-        </div>
+          {/* Headline Principal */}
+          <div className="mb-12 text-center">
+            <h1 className="mb-6 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
+              Organize suas tarefas e compromissos direto no WhatsApp
+            </h1>
+
+            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-600">
+              A Foquinha é a assistente que planeja seu dia, confirma compromissos e lembra do que você precisa fazer. Tudo no zap, sem abrir outro app.
+            </p>
+          </div>
+
+          {/* Imagem WhatsApp - GRANDE */}
+          <div className="mb-12">
+            <div className="relative mx-auto max-w-sm">
+              <Image
+                src="https://i.ibb.co/S4h0cKw7/hero-e-Voc-envia-um-Oi-no-Whats-App.webp"
+                alt="Interface da Foquinha IA no WhatsApp"
+                width={600}
+                height={1200}
+                className="w-full object-contain drop-shadow-2xl"
+                priority
+              />
+            </div>
+            <p className="mt-6 text-center text-base font-semibold text-slate-700">
+              Agenda e lembretes no lugar que você já usa todo dia.
+            </p>
+          </div>
+
+          {/* CTA Principal */}
+          <div className="mb-6 flex justify-center">
+            <CtaButton
+              href={ctaHref}
+              label="Quero minha assistente no WhatsApp"
+              trackingLocation="hero"
+              className="w-full rounded-xl bg-[#128C7E] px-8 py-4 text-center text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#0d6b5f] sm:w-auto"
+            />
+          </div>
+
+          {/* Garantia */}
+          <div className="text-center">
+            <p className="text-sm font-semibold text-secondary">
+              7 dias de garantia total.
+            </p>
+          </div>
         </div>
       </section>
     </SectionTracker>
