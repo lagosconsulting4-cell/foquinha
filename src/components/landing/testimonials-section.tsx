@@ -7,14 +7,14 @@ const testimonials = [
     role: "25 anos",
     quote:
       "trampo o dia todo, nunca consegui usar esses app de organização... sempre esquecia de abrir, perdia td. comecei a usar essa parada no zap e slá, facilitou mt minha vida kkk agr eu acordo e já recebo td q preciso fazer no dia. é mt mais prático, direto no zap q eu já uso msm. melhor coisa q fiz esse ano foi começar a usar isso",
-    image: "https://i.ibb.co/wF2zkBZt/julia-psicologa.webp",
+    image: "https://i.ibb.co/spy6CscW/Luan-estudante.webp",
   },
   {
     name: "Ana Luiza",
     role: "23 anos",
     quote:
       "sempre tentei usar agenda, planner, app, td q aparecia... mas nunca dava certo 😮‍💨 ficava mt ansiosa, me cobrava dms por tentar me organizar e n conseguia manter. era td mt complicado, esquecia as coisas, me sentia uma bagunça. essa IA no zap foi a única coisa q funcionou pq é direto, simples e parece q tem alguém ali me guiando todo dia. tô conseguindo manter minha rotina pela primeira vez na vida, sério 🥹❤️",
-    image: "https://i.ibb.co/spy6CscW/Luan-estudante.webp",
+    image: "https://i.ibb.co/wF2zkBZt/julia-psicologa.webp",
   },
   {
     name: "Maria Clara",
