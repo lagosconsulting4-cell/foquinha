@@ -85,6 +85,83 @@ export default function UpsellFoquinha() {
           </div>
         </div>
 
+        {/* Como a Foquinha funciona - Visual */}
+        <div className="mb-16">
+          <h3 className="mb-12 text-center text-2xl font-bold text-slate-900 sm:text-3xl">
+            Como a Foquinha vai organizar sua vida
+          </h3>
+
+          <div className="mx-auto grid max-w-4xl gap-12 md:grid-cols-3">
+            {/* Card 1 */}
+            <div className="text-center">
+              <div className="mb-4 flex justify-center">
+                <Image
+                  src="https://i.ibb.co/S4h0cKw7/hero-e-Voc-envia-um-Oi-no-Whats-App.webp"
+                  alt="Envie um Oi no WhatsApp"
+                  width={200}
+                  height={400}
+                  className="h-auto w-full max-w-[200px] rounded-2xl object-contain drop-shadow-lg"
+                />
+              </div>
+              <h4 className="mb-2 text-lg font-bold text-slate-900">
+                1. Manda um Oi
+              </h4>
+              <p className="text-sm text-slate-600">
+                Sem cadastro complicado. É só conversar no WhatsApp.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="text-center">
+              <div className="mb-4 flex justify-center">
+                <Image
+                  src="https://i.ibb.co/9kdmVsMs/Plano-personalizado.webp"
+                  alt="Agenda organizada"
+                  width={200}
+                  height={400}
+                  className="h-auto w-full max-w-[200px] rounded-2xl object-contain drop-shadow-lg"
+                />
+              </div>
+              <h4 className="mb-2 text-lg font-bold text-slate-900">
+                2. Ela organiza tudo
+              </h4>
+              <p className="text-sm text-slate-600">
+                Tarefas, compromissos e prazos em uma agenda simples.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="text-center">
+              <div className="mb-4 flex justify-center">
+                <Image
+                  src="https://i.ibb.co/RpxYdP13/Lembretes-e-tarefas-di-rias.webp"
+                  alt="Lembretes automáticos"
+                  width={200}
+                  height={400}
+                  className="h-auto w-full max-w-[200px] rounded-2xl object-contain drop-shadow-lg"
+                />
+              </div>
+              <h4 className="mb-2 text-lg font-bold text-slate-900">
+                3. Você recebe lembretes
+              </h4>
+              <p className="text-sm text-slate-600">
+                Na hora certa, direto no zap. Sem esquecer nada.
+              </p>
+            </div>
+          </div>
+
+          {/* Logo da Foquinha */}
+          <div className="mt-12 flex justify-center">
+            <Image
+              src="https://i.ibb.co/Kzr3VMvx/foquiai-logo.png"
+              alt="Foquinha IA"
+              width={80}
+              height={80}
+              className="object-contain opacity-80"
+            />
+          </div>
+        </div>
+
         {/* Pricing Cards */}
         <div className="mx-auto mb-16 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
           {/* Card Mensal */}
