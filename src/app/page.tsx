@@ -29,7 +29,6 @@ const getCheckoutUrl = (campaign: string) => {
 export default function Home() {
   const checkoutHero = getCheckoutUrl("hero")
   const checkoutBenefits = getCheckoutUrl("benefits")
-  const checkoutPricing = getCheckoutUrl("pricing")
   const checkoutStickyBar = getCheckoutUrl("sticky_bar")
 
   useEffect(() => {
@@ -45,7 +44,7 @@ export default function Home() {
         <BenefitsSection ctaHref={checkoutBenefits} />
         <SecuritySection />
         <TestimonialsSection />
-        <PricingSimple ctaHref={checkoutPricing} />
+        <PricingSimple />
       </main>
       <SiteFooter />
       <StickyCtaBar ctaHref={checkoutStickyBar} />
