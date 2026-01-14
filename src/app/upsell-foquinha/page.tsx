@@ -12,8 +12,10 @@ const STRIPE_LINK_ANNUAL_NO_TRIAL = "https://buy.stripe.com/14A14n9ze16W6Iw7dy9o
 export default function UpsellFoquinha() {
   useEffect(() => {
     // Track upsell page view
-    if (analytics?.trackPageView) {
-      analytics.trackPageView('upsell_foquinha')
+    if (analytics?.track) {
+      analytics.track('upsell_page_viewed', {
+        page: 'upsell_foquinha'
+      })
     }
   }, [])
 
@@ -21,8 +23,8 @@ export default function UpsellFoquinha() {
     const link = plan === 'monthly' ? STRIPE_LINK_MONTHLY_NO_TRIAL : STRIPE_LINK_ANNUAL_NO_TRIAL
 
     // Track CTA click
-    if (analytics?.trackEvent) {
-      analytics.trackEvent('upsell_cta_click', {
+    if (analytics?.track) {
+      analytics.track('upsell_cta_click', {
         plan,
         location: 'upsell_foquinha'
       })

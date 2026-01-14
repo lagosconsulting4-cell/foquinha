@@ -14,8 +14,10 @@ export default function DownsellFoquinha() {
 
   useEffect(() => {
     // Track downsell page view
-    if (analytics?.trackPageView) {
-      analytics.trackPageView('downsell_foquinha')
+    if (analytics?.track) {
+      analytics.track('downsell_page_viewed', {
+        page: 'downsell_foquinha'
+      })
     }
 
     // Exit-intent detection
@@ -25,8 +27,8 @@ export default function DownsellFoquinha() {
         setShowExitIntent(true)
 
         // Track exit-intent trigger
-        if (analytics?.trackEvent) {
-          analytics.trackEvent('exit_intent_triggered', {
+        if (analytics?.track) {
+          analytics.track('exit_intent_triggered', {
             location: 'downsell_foquinha'
           })
         }
@@ -46,8 +48,8 @@ export default function DownsellFoquinha() {
     const link = plan === 'monthly' ? STRIPE_LINK_MONTHLY : STRIPE_LINK_ANNUAL
 
     // Track CTA click
-    if (analytics?.trackEvent) {
-      analytics.trackEvent('downsell_cta_click', {
+    if (analytics?.track) {
+      analytics.track('downsell_cta_click', {
         plan,
         location: 'downsell_foquinha',
         from_exit_intent: showExitIntent
@@ -60,8 +62,8 @@ export default function DownsellFoquinha() {
   const closeModal = () => {
     setShowExitIntent(false)
 
-    if (analytics?.trackEvent) {
-      analytics.trackEvent('exit_intent_dismissed', {
+    if (analytics?.track) {
+      analytics.track('exit_intent_dismissed', {
         location: 'downsell_foquinha'
       })
     }

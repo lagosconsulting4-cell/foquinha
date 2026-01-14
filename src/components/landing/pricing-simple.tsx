@@ -3,15 +3,11 @@ import { Check, Shield } from "lucide-react"
 import { CtaButton } from "@/components/landing/cta-button"
 import { SectionTracker } from "@/components/analytics/section-tracker"
 
-interface PricingSimpleProps {
-  ctaHref?: string
-}
-
 // Links de checkout Stripe COM teste de 3 dias
 const STRIPE_LINK_MONTHLY = "https://buy.stripe.com/28E9ATeTy2b00k8gO89oc08"
 const STRIPE_LINK_ANNUAL = "https://buy.stripe.com/14AbJ1dPuaHw2sg9lG9oc09"
 
-export function PricingSimple({ ctaHref }: PricingSimpleProps) {
+export function PricingSimple() {
   return (
     <SectionTracker sectionId="pricing">
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
