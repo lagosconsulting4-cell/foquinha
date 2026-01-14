@@ -20,7 +20,30 @@ export default function UpsellFoquinha() {
       })
     }
 
-    // Exit-intent detection
+    // Back button redirect (history manipulation)
+    // Add a fake history entry
+    window.history.pushState(null, '', window.location.href)
+
+    const handlePopState = () => {
+      // User clicked back button
+      if (!showExitIntent) {
+        // Push state again to keep them on the page
+        window.history.pushState(null, '', window.location.href)
+
+        // Show exit intent modal
+        setShowExitIntent(true)
+
+        // Track back button trigger
+        if (analytics?.track) {
+          analytics.track('exit_intent_triggered', {
+            location: 'upsell_foquinha',
+            trigger: 'back_button'
+          })
+        }
+      }
+    }
+
+    // Exit-intent detection (mouse leave)
     const handleMouseLeave = (e: MouseEvent) => {
       // Only trigger if mouse is leaving from the top (y < 10)
       if (e.clientY < 10 && !showExitIntent) {
@@ -29,17 +52,20 @@ export default function UpsellFoquinha() {
         // Track exit-intent trigger
         if (analytics?.track) {
           analytics.track('exit_intent_triggered', {
-            location: 'upsell_foquinha'
+            location: 'upsell_foquinha',
+            trigger: 'mouse_leave'
           })
         }
       }
     }
 
-    // Add event listener
+    // Add event listeners
+    window.addEventListener('popstate', handlePopState)
     document.addEventListener('mouseleave', handleMouseLeave)
 
     // Cleanup
     return () => {
+      window.removeEventListener('popstate', handlePopState)
       document.removeEventListener('mouseleave', handleMouseLeave)
     }
   }, [showExitIntent])
