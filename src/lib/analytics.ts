@@ -10,7 +10,7 @@ export const analytics = {
   },
 
   // Eventos de clique nos CTAs (para conversão)
-  trackCheckoutClick: (location: 'hero' | 'benefits' | 'pricing_card' | 'pricing_final' | 'sticky_bar', campaign: string) => {
+  trackCheckoutClick: (location: 'hero' | 'benefits' | 'pricing_card' | 'pricing_final' | 'sticky_bar' | 'pricing_monthly' | 'pricing_annual', campaign: string) => {
     posthog.capture('checkout_clicked', {
       location,
       campaign,
