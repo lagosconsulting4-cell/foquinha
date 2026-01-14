@@ -1,8 +1,8 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Image from "next/image"
-import { Check, Crown, Sparkles, X, Zap, Target, Heart } from "lucide-react"
+import { Check, Crown, Sparkles, X, Zap, Target } from "lucide-react"
 import { analytics } from '@/lib/analytics'
 
 // Links de checkout Stripe SEM teste (direto)
@@ -10,6 +10,8 @@ const STRIPE_LINK_MONTHLY_NO_TRIAL = "https://buy.stripe.com/5kQ3cveTy5ncc2Q41m9
 const STRIPE_LINK_ANNUAL_NO_TRIAL = "https://buy.stripe.com/14A14n9ze16W6Iw7dy9oc0b"
 
 export default function UpsellFoquinha() {
+  const [showExitIntent, setShowExitIntent] = useState(false)
+
   useEffect(() => {
     // Track upsell page view
     if (analytics?.track) {
@@ -17,7 +19,30 @@ export default function UpsellFoquinha() {
         page: 'upsell_foquinha'
       })
     }
-  }, [])
+
+    // Exit-intent detection
+    const handleMouseLeave = (e: MouseEvent) => {
+      // Only trigger if mouse is leaving from the top (y < 10)
+      if (e.clientY < 10 && !showExitIntent) {
+        setShowExitIntent(true)
+
+        // Track exit-intent trigger
+        if (analytics?.track) {
+          analytics.track('exit_intent_triggered', {
+            location: 'upsell_foquinha'
+          })
+        }
+      }
+    }
+
+    // Add event listener
+    document.addEventListener('mouseleave', handleMouseLeave)
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('mouseleave', handleMouseLeave)
+    }
+  }, [showExitIntent])
 
   const handleCTA = (plan: 'monthly' | 'annual') => {
     const link = plan === 'monthly' ? STRIPE_LINK_MONTHLY_NO_TRIAL : STRIPE_LINK_ANNUAL_NO_TRIAL
@@ -31,6 +56,26 @@ export default function UpsellFoquinha() {
     }
 
     window.location.href = link
+  }
+
+  const handleExitRedirect = () => {
+    if (analytics?.track) {
+      analytics.track('exit_intent_redirect', {
+        from: 'upsell_foquinha',
+        to: 'downsell_foquinha'
+      })
+    }
+    window.location.href = '/downsell-foquinha'
+  }
+
+  const closeModal = () => {
+    setShowExitIntent(false)
+
+    if (analytics?.track) {
+      analytics.track('exit_intent_dismissed', {
+        location: 'upsell_foquinha'
+      })
+    }
   }
 
   return (
@@ -142,7 +187,7 @@ export default function UpsellFoquinha() {
                 Você manda tudo pro zap
               </h3>
               <p className="text-sm text-slate-600">
-                "Consulta amanhã 15h", "Comprar presente pro João".<br />
+                &ldquo;Consulta amanhã 15h&rdquo;, &ldquo;Comprar presente pro João&rdquo;.<br />
                 Fala do jeito que você fala.
               </p>
             </div>
@@ -279,7 +324,7 @@ export default function UpsellFoquinha() {
               ))}
             </div>
             <p className="mb-4 text-lg italic text-slate-700">
-              "Finalmente consigo me organizar sem ter que abrir 5 apps diferentes. Tudo no WhatsApp, simples assim."
+              &ldquo;Finalmente consigo me organizar sem ter que abrir 5 apps diferentes. Tudo no WhatsApp, simples assim.&rdquo;
             </p>
             <p className="text-sm font-semibold text-slate-900">— Marina, 24 anos</p>
           </div>
@@ -407,6 +452,57 @@ export default function UpsellFoquinha() {
           </p>
         </div>
       </main>
+
+      {/* Exit-Intent Modal - Redirect to Downsell */}
+      {showExitIntent && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
+          <div className="relative w-full max-w-md rounded-3xl bg-white p-8 shadow-2xl">
+            {/* Close button */}
+            <button
+              onClick={closeModal}
+              className="absolute right-4 top-4 rounded-full p-2 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-600"
+              aria-label="Fechar"
+            >
+              <X className="size-6" />
+            </button>
+
+            {/* Modal content */}
+            <div className="text-center">
+              <div className="mb-6 inline-flex items-center justify-center">
+                <div className="flex size-16 items-center justify-center rounded-full bg-gradient-to-br from-[#128C7E] to-[#0d6b5f]">
+                  <Sparkles className="size-8 text-white" />
+                </div>
+              </div>
+
+              <h2 className="mb-4 text-2xl font-bold text-slate-900">
+                ⏱️ Espera um pouco!
+              </h2>
+
+              <p className="mb-6 text-base text-slate-700">
+                Que tal <strong>testar a Foquinha por 3 dias</strong><br />
+                antes de decidir?
+              </p>
+
+              <div className="mb-6 rounded-xl bg-[#128C7E]/10 p-4">
+                <p className="text-sm font-bold text-[#128C7E]">
+                  🎁 3 dias grátis sem compromisso
+                </p>
+              </div>
+
+              <button
+                onClick={handleExitRedirect}
+                className="w-full rounded-xl bg-[#128C7E] px-6 py-4 text-center text-base font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-[#0d6b5f]"
+              >
+                Ver opção com teste grátis
+              </button>
+
+              <p className="mt-4 text-xs text-slate-500">
+                Cancele quando quiser • Sem taxas ocultas
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

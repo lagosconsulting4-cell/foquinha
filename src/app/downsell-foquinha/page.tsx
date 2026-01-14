@@ -1,8 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Image from "next/image"
-import { Check, Crown, Sparkles, X } from "lucide-react"
+import { Check, Crown, Sparkles } from "lucide-react"
 import { analytics } from '@/lib/analytics'
 
 // Links de checkout Stripe COM teste de 3 dias (mesmos da landing)
@@ -10,8 +10,6 @@ const STRIPE_LINK_MONTHLY = "https://buy.stripe.com/28E9ATeTy2b00k8gO89oc08"
 const STRIPE_LINK_ANNUAL = "https://buy.stripe.com/14AbJ1dPuaHw2sg9lG9oc09"
 
 export default function DownsellFoquinha() {
-  const [showExitIntent, setShowExitIntent] = useState(false)
-
   useEffect(() => {
     // Track downsell page view
     if (analytics?.track) {
@@ -19,30 +17,7 @@ export default function DownsellFoquinha() {
         page: 'downsell_foquinha'
       })
     }
-
-    // Exit-intent detection
-    const handleMouseLeave = (e: MouseEvent) => {
-      // Only trigger if mouse is leaving from the top (y < 10)
-      if (e.clientY < 10 && !showExitIntent) {
-        setShowExitIntent(true)
-
-        // Track exit-intent trigger
-        if (analytics?.track) {
-          analytics.track('exit_intent_triggered', {
-            location: 'downsell_foquinha'
-          })
-        }
-      }
-    }
-
-    // Add event listener
-    document.addEventListener('mouseleave', handleMouseLeave)
-
-    // Cleanup
-    return () => {
-      document.removeEventListener('mouseleave', handleMouseLeave)
-    }
-  }, [showExitIntent])
+  }, [])
 
   const handleCTA = (plan: 'monthly' | 'annual') => {
     const link = plan === 'monthly' ? STRIPE_LINK_MONTHLY : STRIPE_LINK_ANNUAL
@@ -51,22 +26,11 @@ export default function DownsellFoquinha() {
     if (analytics?.track) {
       analytics.track('downsell_cta_click', {
         plan,
-        location: 'downsell_foquinha',
-        from_exit_intent: showExitIntent
+        location: 'downsell_foquinha'
       })
     }
 
     window.location.href = link
-  }
-
-  const closeModal = () => {
-    setShowExitIntent(false)
-
-    if (analytics?.track) {
-      analytics.track('exit_intent_dismissed', {
-        location: 'downsell_foquinha'
-      })
-    }
   }
 
   return (
@@ -244,69 +208,6 @@ export default function DownsellFoquinha() {
           </div>
         </main>
       </div>
-
-      {/* Exit-Intent Modal */}
-      {showExitIntent && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-          <div className="relative w-full max-w-2xl rounded-2xl bg-white p-8 shadow-2xl">
-            {/* Close button */}
-            <button
-              onClick={closeModal}
-              className="absolute right-4 top-4 rounded-full p-2 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-600"
-              aria-label="Fechar"
-            >
-              <X className="size-6" />
-            </button>
-
-            {/* Modal content */}
-            <div className="text-center">
-              <div className="mb-6 inline-flex items-center justify-center">
-                <div className="flex size-16 items-center justify-center rounded-full bg-gradient-to-br from-[#128C7E] to-[#0d6b5f]">
-                  <Sparkles className="size-8 text-white" />
-                </div>
-              </div>
-
-              <h2 className="mb-4 text-2xl font-bold text-slate-900 sm:text-3xl">
-                ⏱️ ESPERA! Teste antes de decidir
-              </h2>
-
-              <p className="mb-8 text-lg text-slate-700">
-                Que tal testar a Foquinha por <strong>3 dias</strong> antes de comprometer?<br />
-                Você não perde nada.
-              </p>
-
-              <div className="mb-6 rounded-xl bg-[#128C7E]/10 p-4">
-                <p className="text-base font-bold text-[#128C7E]">
-                  🎁 3 dias grátis para experimentar
-                </p>
-                <p className="mt-2 text-sm text-slate-700">
-                  Cancele quando quiser. Sem taxas ocultas.
-                </p>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="grid gap-4 sm:grid-cols-2">
-                <button
-                  onClick={() => handleCTA('monthly')}
-                  className="rounded-xl bg-[#128C7E] px-6 py-4 text-center text-base font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#0d6b5f]"
-                >
-                  Mensal R$ 12,90
-                </button>
-                <button
-                  onClick={() => handleCTA('annual')}
-                  className="rounded-xl bg-gradient-to-br from-[#128C7E] to-[#0d6b5f] px-6 py-4 text-center text-base font-bold text-white shadow-xl transition-all hover:scale-105"
-                >
-                  Anual R$ 97,00
-                </button>
-              </div>
-
-              <p className="mt-4 text-xs text-slate-600">
-                3 dias para sentir a diferença • Cancele quando quiser
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   )
 }
