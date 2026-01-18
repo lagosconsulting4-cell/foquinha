@@ -15,25 +15,8 @@ import { StickyCtaBar } from "@/components/landing/sticky-cta-bar"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { analytics } from '@/lib/analytics'
 
-const checkoutBaseUrl =
-  process.env.NEXT_PUBLIC_KIWIFY_CHECKOUT_URL ?? "https://pay.kirvano.com/84f6a23b-ab61-4e1f-b9c5-9bec18bee665"
-
-const getCheckoutUrl = (campaign: string) => {
-  try {
-    const url = new URL(checkoutBaseUrl)
-    url.searchParams.set("utm_source", "landing")
-    url.searchParams.set("utm_medium", "cta")
-    url.searchParams.set("utm_campaign", campaign)
-    return url.toString()
-  } catch {
-    return checkoutBaseUrl
-  }
-}
-
 export default function Home() {
-  const checkoutHero = getCheckoutUrl("hero")
-  const checkoutFinal = getCheckoutUrl("final")
-  const checkoutStickyBar = getCheckoutUrl("sticky_bar")
+  const pricingAnchor = "#pricing"
 
   useEffect(() => {
     // Track landing page view on mount
@@ -43,7 +26,7 @@ export default function Home() {
   return (
     <div className="bg-white text-foreground">
       <main className="flex flex-col gap-0">
-        <HeroSection ctaHref={checkoutHero} />
+        <HeroSection ctaHref={pricingAnchor} />
         <ProblemSection />
         <GuiltBreakSection />
         <SolutionSection />
@@ -52,10 +35,10 @@ export default function Home() {
         <TestimonialsSection />
         <SecuritySection />
         <PricingSimple />
-        <FinalSection ctaHref={checkoutFinal} />
+        <FinalSection ctaHref={pricingAnchor} />
       </main>
       <SiteFooter />
-      <StickyCtaBar ctaHref={checkoutStickyBar} />
+      <StickyCtaBar ctaHref={pricingAnchor} />
     </div>
   )
 }

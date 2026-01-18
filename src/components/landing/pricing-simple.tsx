@@ -22,57 +22,7 @@ export function PricingSimple() {
           </div>
 
           {/* Pricing Cards - 2 PLANOS */}
-          <div className="mx-auto mb-12 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
-            {/* Card Mensal */}
-            <div className="rounded-3xl bg-white p-8 shadow-xl ring-2 ring-slate-200 transition-all hover:scale-105 hover:shadow-2xl">
-              {/* Badge */}
-              <div className="mb-4">
-                <span className="inline-block rounded-full bg-slate-100 px-4 py-1 text-xs font-bold text-slate-700">
-                  MENSAL
-                </span>
-              </div>
-
-              {/* Preço */}
-              <div className="mb-6">
-                <div className="mb-2 flex items-baseline gap-2">
-                  <span className="text-5xl font-bold text-secondary">R$ 12,90</span>
-                  <span className="text-lg text-slate-600">/mês</span>
-                </div>
-              </div>
-
-              {/* Benefícios */}
-              <div className="mb-8 space-y-3">
-                <div className="flex items-start gap-3">
-                  <Check className="size-5 flex-shrink-0 text-secondary" />
-                  <span className="text-sm text-slate-700">Agenda no WhatsApp</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="size-5 flex-shrink-0 text-secondary" />
-                  <span className="text-sm text-slate-700">Lembretes automáticos</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="size-5 flex-shrink-0 text-secondary" />
-                  <span className="text-sm text-slate-700">Reorganização se atrasar</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="size-5 flex-shrink-0 text-secondary" />
-                  <span className="text-sm text-slate-700">Resumo semanal</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="size-5 flex-shrink-0 text-secondary" />
-                  <span className="text-sm text-slate-700">Suporte no zap</span>
-                </div>
-              </div>
-
-              {/* CTA */}
-              <CtaButton
-                href={STRIPE_LINK_MONTHLY}
-                label="Começar agora"
-                trackingLocation="pricing_monthly"
-                className="w-full rounded-xl bg-[#128C7E] px-8 py-4 text-center text-base font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#0d6b5f]"
-              />
-            </div>
-
+          <div id="pricing" className="mx-auto mb-12 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
             {/* Card Anual - DESTAQUE */}
             <div className="relative rounded-3xl bg-gradient-to-br from-secondary/10 to-secondary/5 p-8 shadow-2xl ring-2 ring-secondary/30 transition-all hover:scale-105 hover:shadow-secondary/20">
               {/* Badge destaque */}
@@ -120,9 +70,59 @@ export function PricingSimple() {
               {/* CTA */}
               <CtaButton
                 href={STRIPE_LINK_ANNUAL}
-                label="Começar agora"
+                label="Assinar Agora"
                 trackingLocation="pricing_annual"
                 className="w-full rounded-xl bg-secondary px-8 py-4 text-center text-base font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-secondary/90"
+              />
+            </div>
+
+            {/* Card Mensal */}
+            <div className="rounded-3xl bg-white p-8 shadow-xl ring-2 ring-slate-200 transition-all hover:scale-105 hover:shadow-2xl">
+              {/* Badge */}
+              <div className="mb-4">
+                <span className="inline-block rounded-full bg-slate-100 px-4 py-1 text-xs font-bold text-slate-700">
+                  MENSAL
+                </span>
+              </div>
+
+              {/* Preço */}
+              <div className="mb-6">
+                <div className="mb-2 flex items-baseline gap-2">
+                  <span className="text-5xl font-bold text-secondary">R$ 12,90</span>
+                  <span className="text-lg text-slate-600">/mês</span>
+                </div>
+              </div>
+
+              {/* Benefícios */}
+              <div className="mb-8 space-y-3">
+                <div className="flex items-start gap-3">
+                  <Check className="size-5 flex-shrink-0 text-secondary" />
+                  <span className="text-sm text-slate-700">Agenda no WhatsApp</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="size-5 flex-shrink-0 text-secondary" />
+                  <span className="text-sm text-slate-700">Lembretes automáticos</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="size-5 flex-shrink-0 text-secondary" />
+                  <span className="text-sm text-slate-700">Reorganização se atrasar</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="size-5 flex-shrink-0 text-secondary" />
+                  <span className="text-sm text-slate-700">Resumo semanal</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="size-5 flex-shrink-0 text-secondary" />
+                  <span className="text-sm text-slate-700">Suporte no zap</span>
+                </div>
+              </div>
+
+              {/* CTA */}
+              <CtaButton
+                href={STRIPE_LINK_MONTHLY}
+                label="Assinar Agora"
+                trackingLocation="pricing_monthly"
+                className="w-full rounded-xl bg-[#128C7E] px-8 py-4 text-center text-base font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#0d6b5f]"
               />
             </div>
           </div>

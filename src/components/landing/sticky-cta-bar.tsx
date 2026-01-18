@@ -23,9 +23,12 @@ export function StickyCtaBar({ ctaHref }: StickyCtaBarProps) {
   }, [])
 
   const handleClick = () => {
-    const url = new URL(ctaHref)
-    const campaign = url.searchParams.get("utm_campaign") || "unknown"
-    analytics.trackCheckoutClick("sticky_bar", campaign)
+    // Only track if it's an external URL, not an anchor
+    if (ctaHref.startsWith('http')) {
+      const url = new URL(ctaHref)
+      const campaign = url.searchParams.get("utm_campaign") || "unknown"
+      analytics.trackCheckoutClick("sticky_bar", campaign)
+    }
   }
 
   return (
