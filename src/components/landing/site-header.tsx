@@ -42,7 +42,7 @@ export function SiteHeader({ ctaHref, ctaLabel }: SiteHeaderProps) {
           <div className="relative size-12 overflow-hidden rounded-2xl bg-secondary/10 p-1">
             <Image
               alt="Foquinha IA"
-              src="https://i.ibb.co/Kzr3VMvx/foquiai-logo.png"
+              src="https://i.ibb.co/fGVrxXpL/Habitz-2.png"
               fill
               className="object-contain"
               sizes="48px"

@@ -2,48 +2,49 @@
 
 import Image from "next/image"
 import { useState } from "react"
-import { ChevronLeft, ChevronRight, Check } from "lucide-react"
-import { CtaButton } from "@/components/landing/cta-button"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { SectionTracker } from "@/components/analytics/section-tracker"
 
 const benefits = [
   {
-    title: "Você envia um Oi no WhatsApp",
-    description: "Começa na hora, sem conta nova e sem baixar aplicativo.",
+    step: "1️⃣",
+    title: "Você manda um "Oi" no WhatsApp",
+    description: "Começa na hora. Sem criar conta, sem baixar aplicativo.",
     image: "https://i.ibb.co/S4h0cKw7/hero-e-Voc-envia-um-Oi-no-Whats-App.webp",
   },
   {
+    step: "2️⃣",
     title: "Conta o que precisa lembrar",
-    description: "Consultas, tarefas, provas, reuniões ou coisas da casa. Ela organiza tudo.",
+    description: "Consultas, tarefas, provas, reuniões, coisas da casa — ela organiza tudo.",
     image: "https://i.ibb.co/ccvrJvbP/foquinha-entende-voce.webp",
   },
   {
-    title: "Ela monta sua agenda no zap",
-    description: "Receba uma lista simples com prioridades, horários e o que não pode esquecer.",
+    step: "3️⃣",
+    title: "Recebe sua agenda direto no zap",
+    description: "Uma lista simples com horários, prioridades e o que não pode esquecer.",
     image: "https://i.ibb.co/9kdmVsMs/Plano-personalizado.webp",
   },
   {
-    title: "Lembretes e confirmações diárias",
-    description: "Mensagens curtas avisam o que fazer e confirmam se deu certo.",
+    step: "4️⃣",
+    title: "Lembretes que chegam na hora certa",
+    description: "Mensagens curtas avisam o que fazer e perguntam se deu certo.",
     image: "https://i.ibb.co/RpxYdP13/Lembretes-e-tarefas-di-rias.webp",
   },
   {
-    title: "Reorganiza quando algo muda",
-    description: "Atrasou ou apareceu algo urgente? Ela redistribui e te avisa o novo plano.",
+    step: "5️⃣",
+    title: "Mudou o dia? Ela reorganiza",
+    description: "Atrasou? Apareceu algo urgente? Ela redistribui e te avisa.",
     image: "https://i.ibb.co/ZRKFpdV9/Reorganiza-quando-preciso.webp",
   },
   {
+    step: "6️⃣",
     title: "Resumo semanal",
-    description: "Mostra o que foi feito e o que falta, para você não se perder de novo.",
+    description: "Pra você ver o que fez, o que ficou e não se perder de novo.",
     image: "https://i.ibb.co/RTrL3N3m/Relatorio.webp",
   },
 ] as const
 
-interface BenefitsSectionProps {
-  ctaHref?: string
-}
-
-export function BenefitsSection({ ctaHref }: BenefitsSectionProps) {
+export function BenefitsSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const next = () => {
@@ -63,11 +64,8 @@ export function BenefitsSection({ ctaHref }: BenefitsSectionProps) {
           {/* Título */}
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
-              Como a Foquinha funciona?
+              Funciona assim:
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
-              Simples: mande um Oi no WhatsApp e tenha uma assistente que organiza compromissos, lembra das tarefas e mantém tudo no mesmo lugar.
-            </p>
           </div>
 
           {/* Carrossel */}
@@ -87,6 +85,7 @@ export function BenefitsSection({ ctaHref }: BenefitsSectionProps) {
 
             {/* Texto */}
             <div className="mb-8 text-center">
+              <div className="mb-3 text-3xl">{current.step}</div>
               <h3 className="mb-2 text-xl font-bold text-slate-900 sm:text-2xl">
                 {current.title}
               </h3>
@@ -127,53 +126,6 @@ export function BenefitsSection({ ctaHref }: BenefitsSectionProps) {
             </div>
           </div>
 
-          {/* Bullets de benefícios */}
-          <div className="mx-auto mt-16 max-w-2xl">
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <Check className="size-6 flex-shrink-0 text-secondary" />
-                <span className="text-base text-slate-700">
-                  Agenda única direto no WhatsApp
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                <Check className="size-6 flex-shrink-0 text-secondary" />
-                <span className="text-base text-slate-700">
-                  Lembretes que chegam na hora certa
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                <Check className="size-6 flex-shrink-0 text-secondary" />
-                <span className="text-base text-slate-700">
-                  Reorganização automática se algo mudar
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                <Check className="size-6 flex-shrink-0 text-secondary" />
-                <span className="text-base text-slate-700">
-                  Check-ins rápidos para você não se enrolar
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                <Check className="size-6 flex-shrink-0 text-secondary" />
-                <span className="text-base text-slate-700">
-                  Mais cabeça livre, menos mil apps abertos
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA */}
-          {ctaHref && (
-            <div className="mt-12 flex justify-center">
-              <CtaButton
-                href={ctaHref}
-                label="Ativar minha assistente"
-                trackingLocation="benefits"
-                className="w-full rounded-xl bg-[#128C7E] px-8 py-4 text-center text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#0d6b5f] sm:w-auto"
-              />
-            </div>
-          )}
         </div>
       </section>
     </SectionTracker>

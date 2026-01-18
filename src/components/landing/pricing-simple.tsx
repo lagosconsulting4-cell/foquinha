@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Check, Shield } from "lucide-react"
 import { CtaButton } from "@/components/landing/cta-button"
 import { SectionTracker } from "@/components/analytics/section-tracker"
@@ -48,11 +47,11 @@ export function PricingSimple() {
               <div className="mb-8 space-y-3">
                 <div className="flex items-start gap-3">
                   <Check className="size-5 flex-shrink-0 text-secondary" />
-                  <span className="text-sm text-slate-700">Agenda única no WhatsApp</span>
+                  <span className="text-sm text-slate-700">Agenda no WhatsApp</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="size-5 flex-shrink-0 text-secondary" />
-                  <span className="text-sm text-slate-700">Lembretes diários automáticos</span>
+                  <span className="text-sm text-slate-700">Lembretes automáticos</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="size-5 flex-shrink-0 text-secondary" />
@@ -60,11 +59,11 @@ export function PricingSimple() {
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="size-5 flex-shrink-0 text-secondary" />
-                  <span className="text-sm text-slate-700">Resumo semanal completo</span>
+                  <span className="text-sm text-slate-700">Resumo semanal</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="size-5 flex-shrink-0 text-secondary" />
-                  <span className="text-sm text-slate-700">Suporte direto no zap</span>
+                  <span className="text-sm text-slate-700">Suporte no zap</span>
                 </div>
               </div>
 
@@ -100,38 +99,27 @@ export function PricingSimple() {
                 </p>
               </div>
 
-              {/* Badge economia */}
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-secondary/20 px-4 py-2">
-                <span className="text-sm font-bold text-secondary">
-                  💰 Economize 25% no ano
-                </span>
-              </div>
-
               {/* Benefícios */}
               <div className="mb-8 space-y-3">
                 <div className="flex items-start gap-3">
                   <Check className="size-5 flex-shrink-0 text-secondary" strokeWidth={2.5} />
-                  <span className="text-sm font-medium text-slate-700">Tudo do plano Mensal +</span>
+                  <span className="text-sm font-medium text-slate-700">Tudo do plano mensal +</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-base">💚</span>
-                  <span className="text-sm font-medium text-slate-700">Integração com seus hábitos do BORA</span>
+                  <span className="text-sm font-medium text-slate-700">Integração com hábitos do BORA</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-base">🎯</span>
-                  <span className="text-sm font-medium text-slate-700">Hábitos + Tarefas em um só lugar</span>
+                  <span className="text-sm font-medium text-slate-700">Hábitos + tarefas no mesmo lugar</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-base">🔥</span>
-                  <span className="text-sm font-medium text-slate-700">Compromisso com você mesmo</span>
+                  <span className="text-sm font-medium text-slate-700">Mais constância, menos cobrança</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="text-base">✨</span>
-                  <span className="text-sm font-medium text-slate-700">Transformação completa</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-base">🚀</span>
-                  <span className="text-sm font-medium text-slate-700">Rotina que realmente funciona</span>
+                  <span className="text-base">💰</span>
+                  <span className="text-sm font-medium text-slate-700">Economize 25% no ano</span>
                 </div>
               </div>
 
@@ -145,67 +133,21 @@ export function PricingSimple() {
             </div>
           </div>
 
-          {/* Trust indicators */}
-          <div className="mb-12 text-center">
-            <div className="mx-auto inline-flex items-center gap-2 rounded-full bg-secondary/10 px-6 py-3">
+          {/* Trust indicators + Garantia */}
+          <div className="text-center">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-secondary/10 px-6 py-3">
               <Check className="size-5 text-secondary" />
               <span className="text-sm font-medium text-slate-700">
                 3 dias para testar • Cancele quando quiser
               </span>
             </div>
-          </div>
 
-          {/* Garantia */}
-          <div className="mb-12 text-center">
-            <h3 className="mb-4 text-2xl font-bold text-slate-900">
-              Teste por 3 dias, sem risco.
-            </h3>
-            <div className="mx-auto inline-flex items-center gap-2 rounded-full bg-secondary/10 px-6 py-3">
+            <div className="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-6 py-3">
               <Shield className="size-5 text-secondary" />
               <span className="text-sm font-bold text-secondary">
-                GARANTIA DE 7 DIAS
+                Garantia de 7 dias
               </span>
             </div>
-            <p className="mt-4 text-base text-slate-700">
-              Se a Foquinha não facilitar sua vida, devolvemos seu dinheiro. Sem perguntas.
-            </p>
-          </div>
-
-          {/* Footer Section */}
-          <div className="mb-12 text-center">
-            <h3 className="mb-6 text-2xl font-bold text-slate-900 sm:text-3xl">
-              Sua vida já acontece no WhatsApp.
-              <br />
-              Agora sua organização também.
-            </h3>
-
-            <div className="mb-8 flex justify-center">
-              <Image
-                src="https://i.ibb.co/Kzr3VMvx/foquiai-logo.png"
-                alt="Foquinha IA"
-                width={120}
-                height={120}
-                className="object-contain"
-              />
-            </div>
-
-            <p className="mb-4 text-base text-slate-700">
-              Ative a Foquinha e receba seus compromissos e tarefas no lugar que você já abre todos os dias.
-            </p>
-            <p className="mb-8 text-base font-semibold text-slate-700">
-              Assistente pessoal 24/7 direto no zap.
-            </p>
-
-            <div className="mb-6">
-              <p className="text-sm font-bold text-secondary">7 dias de garantia!</p>
-            </div>
-
-            <CtaButton
-              href={STRIPE_LINK_ANNUAL}
-              label="Quero organizar no WhatsApp"
-              trackingLocation="pricing_final"
-              className="mx-auto w-full rounded-xl bg-[#128C7E] px-8 py-4 text-center text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#0d6b5f] sm:w-auto"
-            />
           </div>
         </div>
       </section>

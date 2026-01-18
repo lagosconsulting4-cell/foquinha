@@ -6,58 +6,60 @@ export function SecuritySection() {
     <SectionTracker sectionId="security">
       <section className="bg-slate-50 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          {/* Badge */}
-          <div className="mb-8 flex justify-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-5 py-2">
-              <Shield className="size-5 text-secondary" />
-              <span className="text-sm font-semibold text-secondary">
-                Segurança e confiança
-              </span>
-            </div>
-          </div>
-
           {/* Título */}
           <div className="mb-12 text-center">
             <h2 className="mb-6 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
-              É seguro?
+              E se eu não conseguir manter?
             </h2>
+            <p className="text-xl font-semibold text-secondary">
+              Tá tudo bem.
+            </p>
           </div>
 
           {/* Bullets */}
-          <div className="mx-auto max-w-2xl space-y-6">
+          <div className="mx-auto max-w-2xl space-y-4">
             <div className="flex items-start gap-4 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
               <Check className="size-6 flex-shrink-0 text-secondary" />
-              <div>
-                <p className="text-lg font-semibold text-slate-900">
-                  Seus dados ficam no WhatsApp
-                </p>
-                <p className="mt-1 text-sm text-slate-600">
-                  A Foquinha usa a infraestrutura segura do WhatsApp para todas as conversas.
-                </p>
-              </div>
+              <p className="text-base font-semibold text-slate-700">
+                Não tem uso perfeito
+              </p>
             </div>
 
             <div className="flex items-start gap-4 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
               <Check className="size-6 flex-shrink-0 text-secondary" />
-              <div>
-                <p className="text-lg font-semibold text-slate-900">
-                  +2.300 pessoas já confiam para não esquecer compromissos
-                </p>
-                <p className="mt-1 text-sm text-slate-600">
-                  Gente ocupada que precisava de um jeito simples para lembrar do que importa.
-                </p>
-              </div>
+              <p className="text-base font-semibold text-slate-700">
+                Não tem meta diária
+              </p>
             </div>
 
             <div className="flex items-start gap-4 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
               <Check className="size-6 flex-shrink-0 text-secondary" />
-              <div>
-                <p className="text-lg font-semibold text-slate-900">
-                  7 dias de garantia: teste sem risco
-                </p>
-                <p className="mt-1 text-sm text-slate-600">
-                  Devolvemos 100% do valor se não fizer sentido para você. Simples assim.
-                </p>
+              <p className="text-base font-semibold text-slate-700">
+                Não quebra se você sumir
+              </p>
+            </div>
+
+            <div className="flex items-start gap-4 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+              <Check className="size-6 flex-shrink-0 text-secondary" />
+              <p className="text-base font-semibold text-slate-700">
+                Você pode parar quando quiser
+              </p>
+            </div>
+          </div>
+
+          {/* Garantia */}
+          <div className="mx-auto mt-12 max-w-2xl text-center">
+            <div className="rounded-2xl bg-gradient-to-r from-green-50 to-emerald-50 p-8 shadow-sm">
+              <p className="mb-4 text-lg font-semibold text-slate-900">
+                Teste sem risco.
+                <br />
+                Se não fizer sentido, a gente devolve seu dinheiro.
+              </p>
+              <div className="inline-flex items-center gap-2 rounded-full bg-secondary/20 px-6 py-3">
+                <Shield className="size-5 text-secondary" />
+                <span className="text-sm font-bold text-secondary">
+                  7 DIAS DE GARANTIA TOTAL. SEM PERGUNTAS.
+                </span>
               </div>
             </div>
           </div>

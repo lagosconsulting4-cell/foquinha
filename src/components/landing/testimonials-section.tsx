@@ -6,21 +6,21 @@ const testimonials = [
     name: "Pedro Lucas",
     role: "25 anos",
     quote:
-      "trampo o dia todo, nunca consegui usar esses app de organização... sempre esquecia de abrir, perdia td. comecei a usar essa parada no zap e slá, facilitou mt minha vida kkk agr eu acordo e já recebo td q preciso fazer no dia. é mt mais prático, direto no zap q eu já uso msm. melhor coisa q fiz esse ano foi começar a usar isso",
+      "Trampo o dia todo, nunca consegui usar esses app de organização… sempre esquecia de abrir. Comecei a usar isso no zap e facilitou demais. Eu acordo e já recebo tudo que preciso fazer no dia.",
     image: "https://i.ibb.co/spy6CscW/Luan-estudante.webp",
   },
   {
     name: "Ana Luiza",
     role: "23 anos",
     quote:
-      "sempre tentei usar agenda, planner, app, td q aparecia... mas nunca dava certo 😮‍💨 ficava mt ansiosa, me cobrava dms por tentar me organizar e n conseguia manter. era td mt complicado, esquecia as coisas, me sentia uma bagunça. essa IA no zap foi a única coisa q funcionou pq é direto, simples e parece q tem alguém ali me guiando todo dia. tô conseguindo manter minha rotina pela primeira vez na vida, sério 🥹❤️",
+      "Sempre tentei agenda, planner, app… nada dava certo. Me cobrava demais. Essa foi a única coisa que funcionou porque é simples e parece que tem alguém ali comigo todo dia.",
     image: "https://i.ibb.co/wF2zkBZt/julia-psicologa.webp",
   },
   {
     name: "Maria Clara",
     role: "27 anos",
     quote:
-      "trabalho o dia todo de carteira assinada, chego em casa morta, aí tem q lembrar de coisa da facul, da casa, da vida... sempre tentei me organizar com agenda mas nunca funcionava, era complicado dms. essa IA no whatsapp salvou real, pq me manda td certinho direto no zap, n preciso abrir mil app. tá me ajudando mt a manter a cabeça no lugar e parar de esquecer td",
+      "Trabalho o dia todo, chego morta. Sempre esquecia coisa da facul e da casa. Isso no WhatsApp salvou real. Me ajudou a manter a cabeça no lugar.",
     image: "https://i.ibb.co/b5nSxRWm/mariana-designer.webp",
   },
 ] as const
@@ -33,10 +33,10 @@ export function TestimonialsSection() {
           {/* Header */}
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
-              Gente comum organizando a vida no WhatsApp
+              Mais de 2.300 pessoas já usam a Foquinha para não esquecer do que importa.
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600">
-              A mesma dúvida que você: será que funciona? Eles testaram e responderam.
+            <p className="mx-auto mt-4 max-w-2xl text-base text-slate-700">
+              Pessoas normais. Vida corrida. Mesmo problema que você.
             </p>
           </div>
 

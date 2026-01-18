@@ -3,10 +3,14 @@
 import { useEffect } from 'react'
 import { HeroSection } from "@/components/landing/hero-section"
 import { ProblemSection } from "@/components/landing/problem-section"
+import { GuiltBreakSection } from "@/components/landing/guilt-break-section"
+import { SolutionSection } from "@/components/landing/solution-section"
 import { BenefitsSection } from "@/components/landing/benefits-section"
-import { SecuritySection } from "@/components/landing/security-section"
+import { PromiseSection } from "@/components/landing/promise-section"
 import { TestimonialsSection } from "@/components/landing/testimonials-section"
+import { SecuritySection } from "@/components/landing/security-section"
 import { PricingSimple } from "@/components/landing/pricing-simple"
+import { FinalSection } from "@/components/landing/final-section"
 import { StickyCtaBar } from "@/components/landing/sticky-cta-bar"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { analytics } from '@/lib/analytics'
@@ -28,7 +32,7 @@ const getCheckoutUrl = (campaign: string) => {
 
 export default function Home() {
   const checkoutHero = getCheckoutUrl("hero")
-  const checkoutBenefits = getCheckoutUrl("benefits")
+  const checkoutFinal = getCheckoutUrl("final")
   const checkoutStickyBar = getCheckoutUrl("sticky_bar")
 
   useEffect(() => {
@@ -41,10 +45,14 @@ export default function Home() {
       <main className="flex flex-col gap-0">
         <HeroSection ctaHref={checkoutHero} />
         <ProblemSection />
-        <BenefitsSection ctaHref={checkoutBenefits} />
-        <SecuritySection />
+        <GuiltBreakSection />
+        <SolutionSection />
+        <BenefitsSection />
+        <PromiseSection />
         <TestimonialsSection />
+        <SecuritySection />
         <PricingSimple />
+        <FinalSection ctaHref={checkoutFinal} />
       </main>
       <SiteFooter />
       <StickyCtaBar ctaHref={checkoutStickyBar} />

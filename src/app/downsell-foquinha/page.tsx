@@ -322,7 +322,7 @@ export default function DownsellFoquinha() {
         <div className="text-center">
           <div className="mb-6 flex justify-center">
             <Image
-              src="https://i.ibb.co/Kzr3VMvx/foquiai-logo.png"
+              src="https://i.ibb.co/fGVrxXpL/Habitz-2.png"
               alt="Foquinha IA"
               width={80}
               height={80}
