@@ -10,7 +10,7 @@ interface CtaButtonProps extends React.ComponentProps<typeof Button> {
   href: string
   label: string
   icon?: React.ReactNode
-  trackingLocation?: 'hero' | 'benefits' | 'pricing_card' | 'pricing_final' | 'sticky_bar' | 'pricing_monthly' | 'pricing_annual'
+  trackingLocation?: 'hero' | 'benefits' | 'pricing_card' | 'pricing_final' | 'sticky_bar' | 'pricing_monthly' | 'pricing_annual' | 'final'
 }
 
 export function CtaButton({ href, label, icon, className, trackingLocation, ...props }: CtaButtonProps) {
