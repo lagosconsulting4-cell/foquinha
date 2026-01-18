@@ -40,15 +40,10 @@ export function StickyCtaBar({ ctaHref }: StickyCtaBarProps) {
     >
       <div className="bg-gradient-to-r from-[#25D366] via-[#25D366] to-[#20BA5A] shadow-2xl shadow-[#25D366]/30">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
-            <div>
-              <p className="text-sm font-bold text-white sm:text-base">
-                Assistente no WhatsApp pronta para usar
-              </p>
-              <p className="text-xs text-white/90 sm:text-sm">
-                Novos acessos são liberados em lotes. Garanta o seu e comece a receber lembretes hoje.
-              </p>
-            </div>
+          <div className="flex items-center">
+            <p className="text-sm font-bold text-white sm:text-base">
+              Organização que chega até você, direto no zap
+            </p>
           </div>
 
           <a
