@@ -8,7 +8,7 @@ import { SectionTracker } from "@/components/analytics/section-tracker"
 const benefits = [
   {
     step: "1️⃣",
-    title: "Você manda um "Oi" no WhatsApp",
+    title: "Você manda um \"Oi\" no WhatsApp",
     description: "Começa na hora. Sem criar conta, sem baixar aplicativo.",
     image: "https://i.ibb.co/S4h0cKw7/hero-e-Voc-envia-um-Oi-no-Whats-App.webp",
   },
