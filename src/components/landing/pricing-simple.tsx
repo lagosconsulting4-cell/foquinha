@@ -2,7 +2,7 @@ import { Check, Shield } from "lucide-react"
 import { CtaButton } from "@/components/landing/cta-button"
 import { SectionTracker } from "@/components/analytics/section-tracker"
 
-// Links de checkout Stripe COM teste de 3 dias
+// Links de checkout Stripe
 const STRIPE_LINK_MONTHLY = "https://buy.stripe.com/28E9ATeTy2b00k8gO89oc08"
 const STRIPE_LINK_ANNUAL = "https://buy.stripe.com/14AbJ1dPuaHw2sg9lG9oc09"
 
@@ -38,9 +38,6 @@ export function PricingSimple() {
                   <span className="text-5xl font-bold text-secondary">R$ 12,90</span>
                   <span className="text-lg text-slate-600">/mês</span>
                 </div>
-                <p className="text-sm text-slate-600">
-                  3 dias para testar
-                </p>
               </div>
 
               {/* Benefícios */}
@@ -70,7 +67,7 @@ export function PricingSimple() {
               {/* CTA */}
               <CtaButton
                 href={STRIPE_LINK_MONTHLY}
-                label="Começar teste"
+                label="Começar agora"
                 trackingLocation="pricing_monthly"
                 className="w-full rounded-xl bg-[#128C7E] px-8 py-4 text-center text-base font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#0d6b5f]"
               />
@@ -93,9 +90,6 @@ export function PricingSimple() {
                 </div>
                 <p className="text-sm font-bold text-secondary">
                   Só R$ 8,08/mês
-                </p>
-                <p className="mt-1 text-sm text-slate-600">
-                  3 dias para testar
                 </p>
               </div>
 
@@ -126,7 +120,7 @@ export function PricingSimple() {
               {/* CTA */}
               <CtaButton
                 href={STRIPE_LINK_ANNUAL}
-                label="Começar teste"
+                label="Começar agora"
                 trackingLocation="pricing_annual"
                 className="w-full rounded-xl bg-secondary px-8 py-4 text-center text-base font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-secondary/90"
               />
@@ -138,7 +132,7 @@ export function PricingSimple() {
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-secondary/10 px-6 py-3">
               <Check className="size-5 text-secondary" />
               <span className="text-sm font-medium text-slate-700">
-                3 dias para testar • Cancele quando quiser
+                Cancele quando quiser
               </span>
             </div>
 
