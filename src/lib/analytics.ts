@@ -2,7 +2,7 @@ import posthog from 'posthog-js'
 
 export const analytics = {
   // Eventos de visualização de seções (para funil)
-  trackSectionViewed: (section: 'hero' | 'problem' | 'solution' | 'security' | 'testimonials' | 'pricing') => {
+  trackSectionViewed: (section: 'hero' | 'problem' | 'guilt-break' | 'solution' | 'benefits' | 'promise' | 'testimonials' | 'security' | 'pricing' | 'final') => {
     posthog.capture('section_viewed', {
       section,
       timestamp: new Date().toISOString(),
@@ -10,7 +10,7 @@ export const analytics = {
   },
 
   // Eventos de clique nos CTAs (para conversão)
-  trackCheckoutClick: (location: 'hero' | 'benefits' | 'pricing_card' | 'pricing_final' | 'sticky_bar' | 'pricing_monthly' | 'pricing_annual', campaign: string) => {
+  trackCheckoutClick: (location: 'hero' | 'benefits' | 'pricing_card' | 'pricing_final' | 'sticky_bar' | 'pricing_monthly' | 'pricing_annual' | 'final', campaign: string) => {
     posthog.capture('checkout_clicked', {
       location,
       campaign,
