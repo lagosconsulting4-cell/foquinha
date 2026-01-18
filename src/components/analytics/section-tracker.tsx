@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import { analytics } from '@/lib/analytics'
 
 interface SectionTrackerProps {
-  sectionId: 'hero' | 'problem' | 'solution' | 'security' | 'testimonials' | 'pricing'
+  sectionId: 'hero' | 'problem' | 'guilt-break' | 'solution' | 'benefits' | 'promise' | 'testimonials' | 'security' | 'pricing' | 'final'
   children: React.ReactNode
 }
 

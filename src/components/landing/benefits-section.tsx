@@ -58,7 +58,7 @@ export function BenefitsSection() {
   const current = benefits[currentIndex]
 
   return (
-    <SectionTracker sectionId="solution">
+    <SectionTracker sectionId="benefits">
       <section className="bg-white px-4 pb-16 pt-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           {/* Título */}
