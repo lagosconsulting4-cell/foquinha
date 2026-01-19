@@ -93,12 +93,12 @@ export function PixIncentiveModal({
         {/* Body */}
         <div className="mb-5 space-y-4">
           {/* Destaque do desconto - MAIOR HIERARQUIA */}
-          <div className="rounded-xl bg-gradient-to-br from-[#25D366] to-[#20bd5a] p-5 text-center shadow-md">
-            <div className="mb-0.5">
-              <span className="text-4xl font-bold text-white">20% OFF</span>
+          <div className="text-center">
+            <div className="mb-1">
+              <span className="text-6xl font-black text-[#25D366]">20%</span>
             </div>
-            <p className="text-xs font-medium text-white/90">
-              Desconto exclusivo
+            <p className="text-sm font-semibold text-slate-700">
+              de desconto exclusivo
             </p>
           </div>
 
@@ -108,8 +108,8 @@ export function PixIncentiveModal({
           </p>
 
           {/* Valor - SEGUNDA HIERARQUIA */}
-          <div className="rounded-xl bg-slate-50 p-4 text-center border border-[#25D366]/20">
-            <div className="mb-0.5">
+          <div className="text-center">
+            <div className="mb-1">
               <span className="text-xs text-slate-500 line-through">De R$ 97,00</span>
             </div>
             <div className="flex items-baseline justify-center gap-1">
