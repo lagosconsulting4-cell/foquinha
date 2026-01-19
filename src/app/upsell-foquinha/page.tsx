@@ -4,13 +4,18 @@ import { useEffect, useState } from 'react'
 import Image from "next/image"
 import { Check, Crown, Sparkles, X, Zap, Target } from "lucide-react"
 import { analytics } from '@/lib/analytics'
+import { PixIncentiveModal } from '@/components/landing/pix-incentive-modal'
 
-// Links de checkout Stripe SEM teste (direto)
-const STRIPE_LINK_MONTHLY_NO_TRIAL = "https://buy.stripe.com/5kQ3cveTy5ncc2Q41m9oc0a"
-const STRIPE_LINK_ANNUAL_NO_TRIAL = "https://buy.stripe.com/14A14n9ze16W6Iw7dy9oc0b"
+// Links de checkout Stripe e PayFast SEM teste (direto)
+const STRIPE_LINK_MONTHLY_NO_TRIAL = "https://buy.stripe.com/5kQ5kDbHmg1Q0k8eG09oc0c"
+const STRIPE_LINK_ANNUAL_NO_TRIAL = "https://payfast.greenn.com.br/154675/offer/lkH71W"
+const PIX_LINK_ANNUAL = "https://payfast.greenn.com.br/154675/offer/SX0mTj"
 
 export default function UpsellFoquinha() {
   const [showExitIntent, setShowExitIntent] = useState(false)
+  const [showPixModal, setShowPixModal] = useState(false)
+  const [clickedPlan, setClickedPlan] = useState<'monthly' | 'annual'>('monthly')
+  const [originalLink, setOriginalLink] = useState('')
 
   useEffect(() => {
     // Track upsell page view
@@ -73,15 +78,32 @@ export default function UpsellFoquinha() {
   const handleCTA = (plan: 'monthly' | 'annual') => {
     const link = plan === 'monthly' ? STRIPE_LINK_MONTHLY_NO_TRIAL : STRIPE_LINK_ANNUAL_NO_TRIAL
 
-    // Track CTA click
+    // Store plan and link for modal
+    setClickedPlan(plan)
+    setOriginalLink(link)
+    setShowPixModal(true)
+
+    // Track modal opened
     if (analytics?.track) {
-      analytics.track('upsell_cta_click', {
-        plan,
-        location: 'upsell_foquinha'
+      analytics.track('pix_modal_opened', {
+        clicked_plan: plan,
+        location: 'upsell'
       })
     }
+  }
 
-    window.location.href = link
+  const handlePixClick = () => {
+    window.location.href = PIX_LINK_ANNUAL
+  }
+
+  const handleContinueOriginal = () => {
+    if (originalLink) {
+      window.location.href = originalLink
+    }
+  }
+
+  const handleClosePixModal = () => {
+    setShowPixModal(false)
   }
 
   const handleExitRedirect = () => {
@@ -383,7 +405,7 @@ export default function UpsellFoquinha() {
                 </div>
                 <div className="mb-6">
                   <div className="mb-2 flex items-baseline justify-center gap-2">
-                    <span className="text-4xl font-black">R$ 12,90</span>
+                    <span className="text-4xl font-black">R$ 19,90</span>
                     <span className="text-lg opacity-80">/mês</span>
                   </div>
                 </div>
@@ -409,7 +431,7 @@ export default function UpsellFoquinha() {
                     <span className="text-lg text-slate-600">/ano</span>
                   </div>
                   <p className="text-sm font-bold text-[#128C7E]">
-                    Só R$ 8,08/mês • Economize 25%
+                    12x de R$ 9,97 • Economize 25%
                   </p>
                 </div>
                 <button
@@ -478,6 +500,16 @@ export default function UpsellFoquinha() {
           </p>
         </div>
       </main>
+
+      {/* Modal de Incentivo Pix */}
+      <PixIncentiveModal
+        open={showPixModal}
+        onClose={handleClosePixModal}
+        onPixClick={handlePixClick}
+        onContinueOriginal={handleContinueOriginal}
+        clickedPlan={clickedPlan}
+        location="upsell"
+      />
 
       {/* Exit-Intent Modal - Redirect to Downsell */}
       {showExitIntent && (

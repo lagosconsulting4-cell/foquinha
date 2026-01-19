@@ -1,12 +1,51 @@
-import { Check, Shield } from "lucide-react"
-import { CtaButton } from "@/components/landing/cta-button"
-import { SectionTracker } from "@/components/analytics/section-tracker"
+'use client'
 
-// Links de checkout Stripe
-const STRIPE_LINK_MONTHLY = "https://buy.stripe.com/28E9ATeTy2b00k8gO89oc08"
-const STRIPE_LINK_ANNUAL = "https://buy.stripe.com/14AbJ1dPuaHw2sg9lG9oc09"
+import { useState } from "react"
+import { Check, Shield } from "lucide-react"
+import { SectionTracker } from "@/components/analytics/section-tracker"
+import { PixIncentiveModal } from "@/components/landing/pix-incentive-modal"
+import { analytics } from "@/lib/analytics"
+
+// Links de checkout Stripe e PayFast
+const STRIPE_LINK_MONTHLY = "https://buy.stripe.com/5kQ5kDbHmg1Q0k8eG09oc0c"
+const STRIPE_LINK_ANNUAL = "https://payfast.greenn.com.br/154675/offer/lkH71W"
+const PIX_LINK_ANNUAL = "https://payfast.greenn.com.br/154675/offer/SX0mTj"
 
 export function PricingSimple() {
+  const [showPixModal, setShowPixModal] = useState(false)
+  const [clickedPlan, setClickedPlan] = useState<'monthly' | 'annual'>('monthly')
+  const [originalLink, setOriginalLink] = useState('')
+
+  const handlePlanClick = (plan: 'monthly' | 'annual') => {
+    const link = plan === 'monthly' ? STRIPE_LINK_MONTHLY : STRIPE_LINK_ANNUAL
+
+    setClickedPlan(plan)
+    setOriginalLink(link)
+    setShowPixModal(true)
+
+    // Track modal opened
+    if (analytics?.track) {
+      analytics.track('pix_modal_opened', {
+        clicked_plan: plan,
+        location: 'pricing'
+      })
+    }
+  }
+
+  const handlePixClick = () => {
+    window.location.href = PIX_LINK_ANNUAL
+  }
+
+  const handleContinueOriginal = () => {
+    if (originalLink) {
+      window.location.href = originalLink
+    }
+  }
+
+  const handleCloseModal = () => {
+    setShowPixModal(false)
+  }
+
   return (
     <SectionTracker sectionId="pricing">
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
@@ -39,6 +78,9 @@ export function PricingSimple() {
                   <span className="text-lg text-slate-600">/ano</span>
                 </div>
                 <p className="text-sm font-bold text-secondary">
+                  ou 12x de R$ 9,97
+                </p>
+                <p className="text-xs text-slate-600">
                   Só R$ 8,08/mês
                 </p>
               </div>
@@ -68,12 +110,12 @@ export function PricingSimple() {
               </div>
 
               {/* CTA */}
-              <CtaButton
-                href={STRIPE_LINK_ANNUAL}
-                label="Assinar Agora"
-                trackingLocation="pricing_annual"
+              <button
+                onClick={() => handlePlanClick('annual')}
                 className="w-full rounded-xl bg-secondary px-8 py-4 text-center text-base font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-secondary/90"
-              />
+              >
+                Assinar Agora
+              </button>
             </div>
 
             {/* Card Mensal */}
@@ -88,7 +130,7 @@ export function PricingSimple() {
               {/* Preço */}
               <div className="mb-6">
                 <div className="mb-2 flex items-baseline gap-2">
-                  <span className="text-5xl font-bold text-secondary">R$ 12,90</span>
+                  <span className="text-5xl font-bold text-secondary">R$ 19,90</span>
                   <span className="text-lg text-slate-600">/mês</span>
                 </div>
               </div>
@@ -118,12 +160,12 @@ export function PricingSimple() {
               </div>
 
               {/* CTA */}
-              <CtaButton
-                href={STRIPE_LINK_MONTHLY}
-                label="Assinar Agora"
-                trackingLocation="pricing_monthly"
+              <button
+                onClick={() => handlePlanClick('monthly')}
                 className="w-full rounded-xl bg-[#128C7E] px-8 py-4 text-center text-base font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#0d6b5f]"
-              />
+              >
+                Assinar Agora
+              </button>
             </div>
           </div>
 
@@ -145,6 +187,16 @@ export function PricingSimple() {
           </div>
         </div>
       </section>
+
+      {/* Modal de Incentivo Pix */}
+      <PixIncentiveModal
+        open={showPixModal}
+        onClose={handleCloseModal}
+        onPixClick={handlePixClick}
+        onContinueOriginal={handleContinueOriginal}
+        clickedPlan={clickedPlan}
+        location="pricing"
+      />
     </SectionTracker>
   )
 }
