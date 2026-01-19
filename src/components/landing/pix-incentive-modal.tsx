@@ -71,55 +71,71 @@ export function PixIncentiveModal({
         </button>
 
         {/* Icon */}
-        <div className="mb-6 flex justify-center">
-          <div className="flex size-16 items-center justify-center rounded-full bg-gradient-to-br from-[#128C7E] to-[#0d6b5f]">
-            <Sparkles className="size-8 text-white" />
+        <div className="mb-8 flex justify-center">
+          <div className="flex size-20 items-center justify-center rounded-2xl bg-[#25D366] shadow-lg">
+            <Sparkles className="size-10 text-white" />
           </div>
         </div>
 
         {/* Title */}
-        <DialogHeader className="mb-6 text-center">
-          <DialogTitle className="mb-3 text-2xl font-bold text-slate-900">
-            ⏱️ Espera! Temos uma oferta especial
+        <DialogHeader className="mb-8 text-center">
+          <DialogTitle className="mb-3 text-3xl font-bold text-slate-900">
+            Você ganhou uma condição especial
           </DialogTitle>
-          <DialogDescription className="text-base text-slate-700">
-            <strong className="text-slate-900">20% de desconto exclusivo</strong> para quem paga no Pix
-          </DialogDescription>
         </DialogHeader>
 
         {/* Body */}
-        <div className="mb-6 space-y-4">
-          <p className="text-center text-base text-slate-700">
-            Assine o <strong className="text-[#128C7E]">plano anual</strong> e faça o compromisso com você mesmo de focar por um ano inteiro.
-          </p>
-
-          <div className="rounded-2xl bg-gradient-to-br from-[#128C7E]/10 to-[#128C7E]/5 p-6 text-center">
+        <div className="mb-8 space-y-6">
+          {/* Destaque do desconto - MAIOR HIERARQUIA */}
+          <div className="rounded-2xl bg-gradient-to-br from-[#25D366] to-[#20bd5a] p-8 text-center shadow-xl">
             <div className="mb-2">
-              <span className="text-sm text-slate-600">De R$ 97,00 por</span>
+              <span className="text-6xl font-black text-white">20% OFF</span>
             </div>
-            <div className="mb-3 flex items-baseline justify-center gap-2">
-              <span className="text-4xl font-black text-[#128C7E]">R$ 77,60</span>
-              <span className="text-lg text-slate-600">/ano</span>
-            </div>
-            <p className="text-sm font-bold text-[#128C7E]">
-              ou 12x de R$ 7,98 • 20% OFF
+            <p className="text-lg font-semibold text-white/90">
+              Desconto exclusivo
             </p>
           </div>
 
-          <div className="space-y-2 text-center text-sm text-slate-600">
-            <p>✓ Um ano inteiro de foco e organização</p>
-            <p>✓ Pagamento único via Pix</p>
-            <p>✓ Garantia de 7 dias</p>
+          {/* Copy do compromisso */}
+          <p className="text-center text-base text-slate-700 leading-relaxed">
+            Assine o <strong className="text-slate-900">plano anual</strong> e faça o compromisso com você mesmo de focar por um ano inteiro
+          </p>
+
+          {/* Valor - SEGUNDA HIERARQUIA */}
+          <div className="rounded-2xl bg-slate-50 p-6 text-center border-2 border-[#25D366]/20">
+            <div className="mb-2">
+              <span className="text-sm text-slate-500 line-through">De R$ 97,00</span>
+            </div>
+            <div className="flex items-baseline justify-center gap-2">
+              <span className="text-5xl font-black text-slate-900">R$ 77,60</span>
+              <span className="text-lg text-slate-600">/ano</span>
+            </div>
+          </div>
+
+          {/* Benefícios */}
+          <div className="space-y-3 text-center text-sm text-slate-700">
+            <p className="flex items-center justify-center gap-2">
+              <span className="text-[#25D366]">✓</span>
+              <span>Um ano inteiro de foco e organização</span>
+            </p>
+            <p className="flex items-center justify-center gap-2">
+              <span className="text-[#25D366]">✓</span>
+              <span>Pagamento único via Pix</span>
+            </p>
+            <p className="flex items-center justify-center gap-2">
+              <span className="text-[#25D366]">✓</span>
+              <span>Garantia de 7 dias</span>
+            </p>
           </div>
         </div>
 
         {/* CTA */}
         <button
           onClick={handlePixClick}
-          className="mb-3 w-full rounded-xl bg-[#128C7E] px-6 py-4 text-center text-base font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-[#0d6b5f]"
+          className="mb-4 w-full rounded-xl bg-[#25D366] px-6 py-4 text-center text-lg font-bold text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl hover:bg-[#20bd5a]"
         >
           <Sparkles className="mr-2 inline size-5" />
-          Assinar anual no Pix
+          Ativar desconto agora
         </button>
 
         {/* Secondary action */}

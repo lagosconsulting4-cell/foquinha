@@ -80,9 +80,6 @@ export function PricingSimple() {
                 <p className="text-sm font-bold text-secondary">
                   ou 12x de R$ 9,97
                 </p>
-                <p className="text-xs text-slate-600">
-                  Só R$ 8,08/mês
-                </p>
               </div>
 
               {/* Benefícios */}
