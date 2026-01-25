@@ -37,11 +37,27 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
           {/* Headline Principal */}
           <div className="mb-12 text-center">
             <h1 className="mb-6 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              Sua Agenda Inteligente no WhatsApp
+              Você não esquece porque é desorganizado.
+              <br />
+              Você esquece porque sua vida acontece no WhatsApp.
             </h1>
 
             <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-700">
-              Pare de esquecer compromissos. Tenha uma agenda que te cobra e organiza suas tarefas onde você já está.
+              Todo dia é corrido.
+              <br />
+              As coisas mudam.
+              <br />
+              Compromissos aparecem.
+              <br />
+              E tentar se organizar em vários apps só aumenta a confusão.
+            </p>
+
+            <p className="mx-auto mt-6 max-w-2xl text-lg font-semibold leading-relaxed text-slate-900">
+              A Foquinha é uma assistente que organiza sua agenda no WhatsApp, o lugar que você já abre o tempo todo, sem baixar app, sem lembrar de abrir nada.
+            </p>
+
+            <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-secondary">
+              👉 Organização que chega até você, não o contrário.
             </p>
           </div>
 
@@ -66,9 +82,9 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
           <div className="mb-6 flex justify-center">
             <CtaButton
               href={ctaHref}
-              label="Quero minha agenda no Zap"
+              label="Quero organizar minha vida no WhatsApp"
               trackingLocation="hero"
-              className="w-full rounded-xl bg-[#25D366] px-8 py-4 text-center text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#1DAA53] sm:w-auto"
+              className="w-full rounded-xl bg-[#128C7E] px-8 py-4 text-center text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#0d6b5f] sm:w-auto"
             />
           </div>
 

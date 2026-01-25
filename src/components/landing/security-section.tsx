@@ -9,8 +9,11 @@ export function SecuritySection() {
           {/* Título */}
           <div className="mb-12 text-center">
             <h2 className="mb-6 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
-              7 dias para colocar sua vida nos trilhos ou seu dinheiro de volta.
+              E se eu não conseguir manter?
             </h2>
+            <p className="text-xl font-semibold text-secondary">
+              Tá tudo bem.
+            </p>
           </div>
 
           {/* Bullets */}
