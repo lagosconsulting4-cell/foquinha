@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { analytics } from "@/lib/analytics"
 
@@ -51,8 +50,7 @@ export function StickyCtaBar({ ctaHref }: StickyCtaBarProps) {
             onClick={handleClick}
             className="group flex items-center gap-2 whitespace-nowrap rounded-full bg-white px-4 py-2.5 text-xs font-bold uppercase tracking-wide text-[#128C7E] transition-all hover:scale-105 hover:bg-[#128C7E] hover:text-white hover:shadow-xl sm:px-6 sm:py-3 sm:text-sm"
           >
-            <span>Ativar agora</span>
-            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+            <span>Quero minha agenda no Zap</span>
           </a>
         </div>
       </div>

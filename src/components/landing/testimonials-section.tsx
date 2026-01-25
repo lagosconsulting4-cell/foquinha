@@ -3,24 +3,24 @@ import { SectionTracker } from "@/components/analytics/section-tracker"
 
 const testimonials = [
   {
-    name: "Pedro Lucas",
-    role: "25 anos",
+    name: "Lucas M.",
+    role: "Dev Jr., 22 anos",
     quote:
-      "Trampo o dia todo, nunca consegui usar esses app de organização… sempre esquecia de abrir. Comecei a usar isso no zap e facilitou demais. Eu acordo e já recebo tudo que preciso fazer no dia.",
+      "Entre a faculdade e o trampo de dev, minha cabeça virava um caos. Esquecia das dailies, das entregas... com a Foquinha no zap, tudo mudou. Ela me manda o que preciso fazer e quando, sem eu ter que abrir Trello ou Notion. É o fim da ansiedade.",
     image: "https://i.ibb.co/spy6CscW/Luan-estudante.webp",
   },
   {
-    name: "Ana Luiza",
-    role: "23 anos",
+    name: "Julia S.",
+    role: "Empreendedora, 24 anos",
     quote:
-      "Sempre tentei agenda, planner, app… nada dava certo. Me cobrava demais. Essa foi a única coisa que funcionou porque é simples e parece que tem alguém ali comigo todo dia.",
+      "Tocar minha loja online sozinha é uma loucura. Cliente, fornecedor, postar... eu vivia nos post-its. Agora, só jogo tudo na Foquinha pelo zap. Ela organiza e me cobra. Minha produtividade dobrou, sério.",
     image: "https://i.ibb.co/wF2zkBZt/julia-psicologa.webp",
   },
   {
-    name: "Maria Clara",
-    role: "27 anos",
+    name: "Bia G.",
+    role: "Estudante e Social Media, 20 anos",
     quote:
-      "Trabalho o dia todo, chego morta. Sempre esquecia coisa da facul e da casa. Isso no WhatsApp salvou real. Me ajudou a manter a cabeça no lugar.",
+      "Conciliar os trabalhos da faculdade com os freelas de social media era impossível. Vivia perdendo prazo. A Foquinha virou meu cérebro. Jogo uma tarefa lá e esqueço. Ela me lembra na hora certa. Salvou meu semestre e meus clientes.",
     image: "https://i.ibb.co/b5nSxRWm/mariana-designer.webp",
   },
 ] as const
@@ -33,10 +33,10 @@ export function TestimonialsSection() {
           {/* Header */}
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
-              Mais de 2.300 pessoas já usam a Foquinha para não esquecer do que importa.
+              A galera da Geração Z não se organiza, se vira.
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-slate-700">
-              Pessoas normais. Vida corrida. Mesmo problema que você.
+              Veja como jovens CLTs e empreendedores estão usando a Foquinha para não surtar na correria.
             </p>
           </div>
 

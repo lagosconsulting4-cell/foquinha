@@ -37,9 +37,9 @@ export function FinalSection({ ctaHref }: FinalSectionProps) {
           <div className="mb-6 flex justify-center">
             <CtaButton
               href={ctaHref}
-              label="Quero organizar minha vida no WhatsApp"
+              label="Quero minha agenda no Zap"
               trackingLocation="final"
-              className="w-full rounded-xl bg-[#128C7E] px-8 py-4 text-center text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#0d6b5f] sm:w-auto"
+              className="w-full rounded-xl bg-[#25D366] px-8 py-4 text-center text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#1DAA53] sm:w-auto"
             />
           </div>
 
