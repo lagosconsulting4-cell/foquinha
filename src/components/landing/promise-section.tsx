@@ -46,7 +46,7 @@ export function PromiseSection() {
               <div className="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
                 <Check className="size-6 flex-shrink-0 text-secondary" />
                 <span className="text-base font-semibold text-slate-700">
-                  Alguém te lembrando, não te cobrando
+                  Alguém que gerencia para você só executar.
                 </span>
               </div>
             </div>
