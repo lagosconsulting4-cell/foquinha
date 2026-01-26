@@ -57,10 +57,6 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
                 priority
               />
             </div>
-            <p className="mt-6 text-center text-base font-semibold text-slate-700">
-              Agenda e lembretes no lugar que você já usa todo dia.
-            </p>
-          </div>
 
           {/* CTA Principal */}
           <div className="mb-6 flex justify-center">
