@@ -1,7 +1,27 @@
+"use client"
+
+import React from "react"
 import { Check } from "lucide-react"
+import Autoplay from "embla-carousel-autoplay"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel"
 import { SectionTracker } from "@/components/analytics/section-tracker"
 
+const exampleMessages = [
+  "Lembrete de consulta médica amanhã às 10h.",
+  "Não esquecer de comprar ração para o dog!",
+  "Amanhã é o aniversário da mamãe!",
+  "Reunião de equipe adiada para as 15h.",
+]
+
 export function SolutionSection() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2500, stopOnInteraction: true })
+  )
+
   return (
     <SectionTracker sectionId="solution">
       <section className="bg-gradient-to-b from-slate-50 to-white px-4 py-16 sm:px-6 lg:px-8">
@@ -15,23 +35,25 @@ export function SolutionSection() {
               É lá que chegam:
             </p>
 
-            <div className="mx-auto mb-8 max-w-md space-y-2 text-left">
-              <div className="flex items-center gap-3">
-                <Check className="size-5 flex-shrink-0 text-secondary" />
-                <span className="text-base text-slate-700">compromissos</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="size-5 flex-shrink-0 text-secondary" />
-                <span className="text-base text-slate-700">mensagens</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="size-5 flex-shrink-0 text-secondary" />
-                <span className="text-base text-slate-700">avisos</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="size-5 flex-shrink-0 text-secondary" />
-                <span className="text-base text-slate-700">mudanças de planos</span>
-              </div>
+            <div className="mx-auto mb-8 max-w-md">
+              <Carousel
+                plugins={[plugin.current]}
+                className="w-full"
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
+              >
+                <CarouselContent>
+                  {exampleMessages.map((message, index) => (
+                    <CarouselItem key={index}>
+                      <div className="flex justify-center p-1">
+                        <div className="rounded-lg bg-[#DCF8C6] p-3 text-left shadow">
+                          <p className="text-base text-slate-800">{message}</p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
             </div>
 
             <p className="mx-auto mb-12 max-w-2xl text-lg font-semibold leading-relaxed text-slate-900">
@@ -46,26 +68,40 @@ export function SolutionSection() {
               <div className="space-y-4 text-left">
                 <div className="flex items-start gap-3">
                   <Check className="size-6 flex-shrink-0 text-secondary" />
-                  <span className="text-base text-slate-700">lembra o que você precisa fazer</span>
+                  <span className="text-base text-slate-700">
+                    lembra o que você precisa fazer
+                  </span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="size-6 flex-shrink-0 text-secondary" />
-                  <span className="text-base text-slate-700">organiza seus compromissos</span>
+                  <span className="text-base text-slate-700">
+                    organiza seus compromissos
+                  </span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="size-6 flex-shrink-0 text-secondary" />
-                  <span className="text-base text-slate-700">ajusta tudo quando algo muda</span>
+                  <span className="text-base text-slate-700">
+                    ajusta tudo quando algo muda
+                  </span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="size-6 flex-shrink-0 text-secondary" />
-                  <span className="text-base text-slate-700">te ajuda a não se perder no dia a dia</span>
+                  <span className="text-base text-slate-700">
+                    te ajuda a não se perder no dia a dia
+                  </span>
                 </div>
               </div>
 
               <div className="mt-8 space-y-2 border-t border-slate-200 pt-6">
-                <p className="text-lg font-semibold text-slate-900">Sem app novo.</p>
-                <p className="text-lg font-semibold text-slate-900">Sem setup complicado.</p>
-                <p className="text-lg font-semibold text-slate-900">Sem virar outra pessoa.</p>
+                <p className="text-lg font-semibold text-slate-900">
+                  Sem app novo.
+                </p>
+                <p className="text-lg font-semibold text-slate-900">
+                  Sem setup complicado.
+                </p>
+                <p className="text-lg font-semibold text-slate-900">
+                  Sem virar outra pessoa.
+                </p>
               </div>
             </div>
           </div>
