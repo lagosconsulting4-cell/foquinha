@@ -11,36 +11,48 @@ const benefits = [
     title: "Você manda um \"Oi\" no WhatsApp",
     description: "Começa na hora. Sem criar conta, sem baixar aplicativo.",
     image: "https://i.ibb.co/S4h0cKw7/hero-e-Voc-envia-um-Oi-no-Whats-App.webp",
+    width: 600,
+    height: 1200,
   },
   {
     step: "2️⃣",
     title: "Conta o que precisa lembrar",
     description: "Consultas, tarefas, provas, reuniões, coisas da casa — ela organiza tudo.",
     image: "https://i.ibb.co/xSXgvX59/Telas-Foquinha-1200-x-750-px-1.png",
+    width: 1200,
+    height: 750,
   },
   {
     step: "3️⃣",
     title: "Recebe sua agenda direto no zap",
     description: "Uma lista simples com horários, prioridades e o que não pode esquecer.",
     image: "https://i.ibb.co/9kdmVsMs/Plano-personalizado.webp",
+    width: 600,
+    height: 1200,
   },
   {
     step: "4️⃣",
     title: "Lembretes que chegam na hora certa",
     description: "Mensagens curtas avisam o que fazer e perguntam se deu certo.",
     image: "https://i.ibb.co/7NCPSkDG/Telas-Foquinha-1200-x-750-px-2.png",
+    width: 1200,
+    height: 750,
   },
   {
     step: "5️⃣",
     title: "Mudou o dia? Ela reorganiza",
     description: "Atrasou? Apareceu algo urgente? Ela redistribui e te avisa.",
     image: "https://i.ibb.co/ZRKFpdV9/Reorganiza-quando-preciso.webp",
+    width: 600,
+    height: 1200,
   },
   {
     step: "6️⃣",
     title: "Resumo semanal",
     description: "Pra você ver o que fez, o que ficou e não se perder de novo.",
     image: "https://i.ibb.co/RTrL3N3m/Relatorio.webp",
+    width: 600,
+    height: 1200,
   },
 ] as const
 
@@ -72,13 +84,13 @@ export function BenefitsSection() {
           <div className="relative">
             {/* Imagem */}
             <div className="mb-8">
-              <div className="relative mx-auto max-w-[280px] sm:max-w-sm">
+              <div className="relative mx-auto max-w-lg">
                 <Image
                   src={current.image}
                   alt={current.title}
-                  width={600}
-                  height={1200}
-                  className="w-full object-contain drop-shadow-2xl"
+                  width={current.width}
+                  height={current.height}
+                  className="w-full rounded-lg object-contain drop-shadow-2xl"
                 />
               </div>
             </div>
