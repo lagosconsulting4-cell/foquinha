@@ -33,10 +33,10 @@ export function TestimonialsSection() {
           {/* Header */}
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
-              A galera da Geração Z não se organiza, se vira.
+              Veja só o que a galera que usa a Foquinha está dizendo
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-slate-700">
-              Veja como jovens CLTs e empreendedores estão usando a Foquinha para não surtar na correria.
+              pessoas como você usando a Foquinha pra não surtar na correria
             </p>
           </div>
 

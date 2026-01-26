@@ -34,33 +34,12 @@ export function PricingSimple() {
 
           {/* Pricing Cards - 2 PLANOS */}
           <div id="pricing" className="mx-auto mb-12 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
-            {/* Card Mensal */}
-            <div className="flex flex-col rounded-3xl bg-white p-8 shadow-xl ring-2 ring-slate-200 transition-all hover:scale-105 hover:shadow-2xl">
-              <div className="flex-grow">
-                <div className="text-center">
-                  <h3 className="mb-4 text-2xl font-bold text-slate-800">MENSAL</h3>
-                  <p className="mb-6 text-4xl font-bold text-secondary">
-                    R$ 19,90<span className="text-lg font-medium text-slate-500">/mês</span>
-                  </p>
-                </div>
-              </div>
-              <a
-                href={MONTHLY_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => analytics.track('cta_click', { location: 'pricing_monthly', cta_text: 'Assinar Mensal' })}
-                className="block w-full rounded-xl bg-slate-200 px-8 py-4 text-center text-base font-bold text-slate-800 shadow-lg transition-all hover:scale-105 hover:bg-slate-300"
-              >
-                Assinar Mensal
-              </a>
-            </div>
-
             {/* Card Anual - DESTAQUE */}
             <div className="relative flex flex-col rounded-3xl bg-gradient-to-br from-secondary/10 to-secondary/5 p-8 shadow-2xl ring-2 ring-secondary/30 transition-all hover:scale-105 hover:shadow-secondary/20">
               <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-secondary px-4 py-1 text-sm font-bold text-white">
                 MAIS ESCOLHIDO
               </span>
-              
+
               <div className="flex-grow">
                 <div className="text-center">
                   <h3 className="mb-2 text-2xl font-bold text-slate-800">ACESSO ANUAL</h3>
@@ -94,7 +73,7 @@ export function PricingSimple() {
               >
                 Quero minha agenda no Zap
               </a>
-              <a 
+              <a
                 href={ANNUAL_CARD_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -102,6 +81,27 @@ export function PricingSimple() {
                 className="block text-center text-sm font-medium text-slate-600 hover:underline"
               >
                 Ou 12x de R$ 9,97 no cartão
+              </a>
+            </div>
+
+            {/* Card Mensal */}
+            <div className="flex flex-col rounded-3xl bg-white p-8 shadow-xl ring-2 ring-slate-200 transition-all hover:scale-105 hover:shadow-2xl">
+              <div className="flex-grow">
+                <div className="text-center">
+                  <h3 className="mb-4 text-2xl font-bold text-slate-800">MENSAL</h3>
+                  <p className="mb-6 text-4xl font-bold text-secondary">
+                    R$ 19,90<span className="text-lg font-medium text-slate-500">/mês</span>
+                  </p>
+                </div>
+              </div>
+              <a
+                href={MONTHLY_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => analytics.track('cta_click', { location: 'pricing_monthly', cta_text: 'Assinar Mensal' })}
+                className="block w-full rounded-xl bg-slate-200 px-8 py-4 text-center text-base font-bold text-slate-800 shadow-lg transition-all hover:scale-105 hover:bg-slate-300"
+              >
+                Assinar Mensal
               </a>
             </div>
           </div>
