@@ -47,16 +47,20 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
 
           {/* Imagem WhatsApp - GRANDE */}
           <div className="mb-12">
-            <div className="relative mx-auto max-w-3xl">
+            <div className="relative mx-auto max-w-sm">
               <Image
                 src="https://i.ibb.co/GQtfMVNn/Telas-Foquinha-1200-x-750-px.png"
                 alt="Interface da Foquinha IA no WhatsApp"
-                width={1200}
-                height={750}
-                className="w-full rounded-lg object-contain drop-shadow-2xl"
+                width={600}
+                height={1200}
+                className="w-full object-contain drop-shadow-2xl"
                 priority
               />
             </div>
+            <p className="mt-6 text-center text-base font-semibold text-slate-700">
+              Agenda e lembretes no lugar que você já usa todo dia.
+            </p>
+          </div>
 
           {/* CTA Principal */}
           <div className="mb-6 flex justify-center">
