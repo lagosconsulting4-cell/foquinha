@@ -16,7 +16,7 @@ const benefits = [
     step: "2️⃣",
     title: "Conta o que precisa lembrar",
     description: "Consultas, tarefas, provas, reuniões, coisas da casa — ela organiza tudo.",
-    image: "https://i.ibb.co/xSXgvX59/Telas-Foquinha-1200-x-750-px-1.png",
+    image: "https://i.ibb.co/wZBbxHLd/Telas-Foquinha-1200-x-750-px-4.png",
   },
   {
     step: "3️⃣",
@@ -28,7 +28,7 @@ const benefits = [
     step: "4️⃣",
     title: "Lembretes que chegam na hora certa",
     description: "Mensagens curtas avisam o que fazer e perguntam se deu certo.",
-    image: "https://i.ibb.co/7NCPSkDG/Telas-Foquinha-1200-x-750-px-2.png",
+    image: "https://i.ibb.co/P2qDVM6/Telas-Foquinha-1200-x-750-px-5.png",
   },
   {
     step: "5️⃣",
