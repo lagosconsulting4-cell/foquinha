@@ -10,13 +10,13 @@ const benefits = [
     step: "1️⃣",
     title: "Você manda um \"Oi\" no WhatsApp",
     description: "Começa na hora. Sem criar conta, sem baixar aplicativo.",
-    image: "https://i.ibb.co/S4h0cKw7/hero-e-Voc-envia-um-Oi-no-Whats-App.webp",
+    image: "https://i.ibb.co/whfjxxX8/Telas-Foquinha-1200-x-750-px-6.png",
   },
   {
     step: "2️⃣",
     title: "Conta o que precisa lembrar",
     description: "Consultas, tarefas, provas, reuniões, coisas da casa — ela organiza tudo.",
-    image: "https://i.ibb.co/wZBbxHLd/Telas-Foquinha-1200-x-750-px-4.png",
+    image: "https://i.ibb.co/v4X7wb9X/Telas-Foquinha-1200-x-750-px-7.png",
   },
   {
     step: "3️⃣",
@@ -28,7 +28,7 @@ const benefits = [
     step: "4️⃣",
     title: "Lembretes que chegam na hora certa",
     description: "Mensagens curtas avisam o que fazer e perguntam se deu certo.",
-    image: "https://i.ibb.co/P2qDVM6/Telas-Foquinha-1200-x-750-px-5.png",
+    image: "https://i.ibb.co/8nFZHgf8/Telas-Foquinha-1200-x-750-px-8.png",
   },
   {
     step: "5️⃣",

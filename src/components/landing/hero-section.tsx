@@ -49,7 +49,7 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
           <div className="mb-12">
             <div className="relative mx-auto max-w-sm">
               <Image
-                src="https://i.ibb.co/mFVx8VnQ/Telas-Foquinha-1200-x-750-px-3.png"
+                src="https://i.ibb.co/whfjxxX8/Telas-Foquinha-1200-x-750-px-6.png"
                 alt="Interface da Foquinha IA no WhatsApp"
                 width={600}
                 height={1200}
