@@ -44,10 +44,9 @@ export function PricingSimple() {
                   <h3 className="mb-2 text-2xl font-bold text-slate-800">ACESSO ANUAL</h3>
                   <p className="mb-2 text-sm font-semibold text-slate-600">Custa menos que um café por mês</p>
                   <p className="mb-1 text-sm text-slate-400 line-through">De R$ 19,90/mês</p>
-                  <p className="mb-2 text-6xl font-bold text-secondary">
+                  <p className="mb-6 text-6xl font-bold text-secondary">
                     R$ 9,97 <span className="text-lg font-medium text-slate-500">/mês</span>
                   </p>
-                  <p className="mb-6 text-sm font-medium text-slate-600">12x no cartão (aceita Pix também)</p>
                 </div>
 
                 {/* Benefícios */}
