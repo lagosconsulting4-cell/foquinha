@@ -8,52 +8,89 @@ export function PromiseSection() {
         <div className="mx-auto max-w-4xl">
           <div className="text-center">
             <h2 className="mb-6 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
-              Com a Foquinha, você não faz mais coisas.
+              Transforme sua rotina em resultados reais
             </h2>
             <p className="mx-auto mb-12 max-w-2xl text-xl font-semibold leading-relaxed text-slate-900">
-              Você para de carregar tudo na cabeça.
+              Mais produtividade, menos estresse. Tudo no WhatsApp.
             </p>
 
             <div className="mx-auto max-w-2xl space-y-4">
-              <div className="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
-                <Check className="size-6 flex-shrink-0 text-secondary" />
-                <span className="text-base font-semibold text-slate-700">
-                  Menos coisa esquecida
-                </span>
+              <div className="flex items-start gap-3 rounded-2xl bg-white p-5 shadow-md ring-1 ring-slate-200 transition-all hover:shadow-lg">
+                <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
+                <div className="text-left">
+                  <span className="text-lg font-bold text-slate-900">
+                    3x mais tarefas concluídas por semana
+                  </span>
+                  <p className="mt-1 text-sm text-slate-600">
+                    Cobrança ativa que te mantém no ritmo
+                  </p>
+                </div>
               </div>
 
-              <div className="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
-                <Check className="size-6 flex-shrink-0 text-secondary" />
-                <span className="text-base font-semibold text-slate-700">
-                  Menos culpa
-                </span>
+              <div className="flex items-start gap-3 rounded-2xl bg-white p-5 shadow-md ring-1 ring-slate-200 transition-all hover:shadow-lg">
+                <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
+                <div className="text-left">
+                  <span className="text-lg font-bold text-slate-900">
+                    Economize 2h por dia em organização
+                  </span>
+                  <p className="mt-1 text-sm text-slate-600">
+                    Sem perder tempo entre apps e planners
+                  </p>
+                </div>
               </div>
 
-              <div className="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
-                <Check className="size-6 flex-shrink-0 text-secondary" />
-                <span className="text-base font-semibold text-slate-700">
-                  Menos apps abertos
-                </span>
+              <div className="flex items-start gap-3 rounded-2xl bg-white p-5 shadow-md ring-1 ring-slate-200 transition-all hover:shadow-lg">
+                <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
+                <div className="text-left">
+                  <span className="text-lg font-bold text-slate-900">
+                    100% das suas metas acompanhadas
+                  </span>
+                  <p className="mt-1 text-sm text-slate-600">
+                    Nada fica esquecido, tudo é monitorado
+                  </p>
+                </div>
               </div>
 
-              <div className="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
-                <Check className="size-6 flex-shrink-0 text-secondary" />
-                <span className="text-base font-semibold text-slate-700">
-                  Mais clareza no dia
-                </span>
+              <div className="flex items-start gap-3 rounded-2xl bg-white p-5 shadow-md ring-1 ring-slate-200 transition-all hover:shadow-lg">
+                <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
+                <div className="text-left">
+                  <span className="text-lg font-bold text-slate-900">
+                    Aumente sua produtividade em 40%
+                  </span>
+                  <p className="mt-1 text-sm text-slate-600">
+                    Foco no que importa, sem distrações
+                  </p>
+                </div>
               </div>
 
-              <div className="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
-                <Check className="size-6 flex-shrink-0 text-secondary" />
-                <span className="text-base font-semibold text-slate-700">
-                  Alguém que gerencia para você só executar.
-                </span>
+              <div className="flex items-start gap-3 rounded-2xl bg-white p-5 shadow-md ring-1 ring-slate-200 transition-all hover:shadow-lg">
+                <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
+                <div className="text-left">
+                  <span className="text-lg font-bold text-slate-900">
+                    Conquiste objetivos 5x mais rápido
+                  </span>
+                  <p className="mt-1 text-sm text-slate-600">
+                    Consistência diária que gera resultados
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 rounded-2xl bg-white p-5 shadow-md ring-1 ring-slate-200 transition-all hover:shadow-lg">
+                <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
+                <div className="text-left">
+                  <span className="text-lg font-bold text-slate-900">
+                    Reduza procrastinação em 80%
+                  </span>
+                  <p className="mt-1 text-sm text-slate-600">
+                    Alguém te cobrando no momento certo
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="mx-auto mt-12 max-w-2xl rounded-2xl bg-gradient-to-r from-green-50 to-emerald-50 p-8 shadow-sm">
-              <p className="text-lg font-bold text-secondary">
-                É organização que funciona até nos dias bagunçados.
+            <div className="mx-auto mt-12 max-w-2xl rounded-2xl bg-gradient-to-r from-secondary/10 to-secondary/5 p-8 shadow-lg ring-2 ring-secondary/20">
+              <p className="text-xl font-bold text-secondary">
+                Não é só organização. É evolução real, mensurável e no seu ritmo.
               </p>
             </div>
           </div>

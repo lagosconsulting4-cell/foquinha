@@ -25,15 +25,6 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
             />
           </div>
 
-          {/* Badge */}
-          <div className="mb-8 flex justify-center">
-            <div className="inline-flex items-center rounded-full bg-secondary/10 px-5 py-2">
-              <span className="text-sm font-semibold text-secondary">
-                Assistente de organização no WhatsApp
-              </span>
-            </div>
-          </div>
-
           {/* Headline Principal */}
           <div className="mb-12 text-center">
             <h1 className="mb-6 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">

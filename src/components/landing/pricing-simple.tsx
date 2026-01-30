@@ -7,7 +7,6 @@ import { analytics } from "@/lib/analytics"
 export function PricingSimple() {
   // Links de checkout
   const MONTHLY_LINK = "https://buy.stripe.com/5kQ5kDbHmg1Q0k8eG09oc0c"
-  const ANNUAL_PIX_LINK = "https://payfast.greenn.com.br/154675/offer/SX0mTj"
   const ANNUAL_CARD_LINK = "https://payfast.greenn.com.br/154675/offer/lkH71W"
 
   const benefits = [
@@ -37,17 +36,18 @@ export function PricingSimple() {
             {/* Card Anual - DESTAQUE */}
             <div className="relative flex flex-col rounded-3xl bg-gradient-to-br from-secondary/10 to-secondary/5 p-8 shadow-2xl ring-2 ring-secondary/30 transition-all hover:scale-105 hover:shadow-secondary/20">
               <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-secondary px-4 py-1 text-sm font-bold text-white">
-                MAIS ESCOLHIDO
+                50% OFF
               </span>
 
               <div className="flex-grow">
                 <div className="text-center">
                   <h3 className="mb-2 text-2xl font-bold text-slate-800">ACESSO ANUAL</h3>
                   <p className="mb-2 text-sm font-semibold text-slate-600">Custa menos que um café por mês</p>
+                  <p className="mb-1 text-sm text-slate-400 line-through">De R$ 19,90/mês</p>
                   <p className="mb-2 text-6xl font-bold text-secondary">
-                    R$ 6,40 <span className="text-lg font-medium text-slate-500">/mês</span>
+                    R$ 9,97 <span className="text-lg font-medium text-slate-500">/mês</span>
                   </p>
-                  <p className="mb-6 text-sm font-medium text-slate-600">no valor único de R$ 77,00 (Pix)</p>
+                  <p className="mb-6 text-sm font-medium text-slate-600">12x no cartão (aceita Pix também)</p>
                 </div>
 
                 {/* Benefícios */}
@@ -65,22 +65,13 @@ export function PricingSimple() {
 
               {/* CTA */}
               <a
-                href={ANNUAL_PIX_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => analytics.track('cta_click', { location: 'pricing_annual_pix', cta_text: 'Quero minha agenda no Zap' })}
-                className="mb-3 block w-full rounded-xl bg-[#25D366] px-8 py-4 text-center text-lg font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-[#1DAA53]"
-              >
-                Quero minha agenda no Zap
-              </a>
-              <a
                 href={ANNUAL_CARD_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => analytics.track('cta_click', { location: 'pricing_annual_card', cta_text: 'Ou 12x de R$ 9,97 no cartão' })}
-                className="block text-center text-sm font-medium text-slate-600 hover:underline"
+                onClick={() => analytics.track('cta_click', { location: 'pricing_annual_card', cta_text: 'Quero minha agenda no Zap' })}
+                className="block w-full rounded-xl bg-secondary px-8 py-4 text-center text-lg font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-secondary/90"
               >
-                Ou 12x de R$ 9,97 no cartão
+                Quero minha agenda no Zap
               </a>
             </div>
 
