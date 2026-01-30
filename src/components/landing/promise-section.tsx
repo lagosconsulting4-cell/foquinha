@@ -1,5 +1,6 @@
 import { Check } from "lucide-react"
 import { SectionTracker } from "@/components/analytics/section-tracker"
+import { AnimatedCounter } from "@/components/ui/animated-counter"
 
 export function PromiseSection() {
   return (
@@ -19,7 +20,7 @@ export function PromiseSection() {
                 <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
                 <div className="text-left">
                   <span className="text-lg font-bold text-slate-900">
-                    3x mais tarefas concluídas por semana
+                    <AnimatedCounter value="3x" /> mais tarefas concluídas por semana
                   </span>
                   <p className="mt-1 text-sm text-slate-600">
                     Cobrança ativa que te mantém no ritmo
@@ -31,7 +32,7 @@ export function PromiseSection() {
                 <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
                 <div className="text-left">
                   <span className="text-lg font-bold text-slate-900">
-                    Economize 2h por dia em organização
+                    Economize <AnimatedCounter value="2h" /> por dia em organização
                   </span>
                   <p className="mt-1 text-sm text-slate-600">
                     Sem perder tempo entre apps e planners
@@ -43,7 +44,7 @@ export function PromiseSection() {
                 <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
                 <div className="text-left">
                   <span className="text-lg font-bold text-slate-900">
-                    100% das suas metas acompanhadas
+                    <AnimatedCounter value="100%" /> das suas metas acompanhadas
                   </span>
                   <p className="mt-1 text-sm text-slate-600">
                     Nada fica esquecido, tudo é monitorado
@@ -55,7 +56,7 @@ export function PromiseSection() {
                 <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
                 <div className="text-left">
                   <span className="text-lg font-bold text-slate-900">
-                    Aumente sua produtividade em 40%
+                    Aumente sua produtividade em <AnimatedCounter value="40%" />
                   </span>
                   <p className="mt-1 text-sm text-slate-600">
                     Foco no que importa, sem distrações
@@ -67,7 +68,7 @@ export function PromiseSection() {
                 <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
                 <div className="text-left">
                   <span className="text-lg font-bold text-slate-900">
-                    Conquiste objetivos 5x mais rápido
+                    Conquiste objetivos <AnimatedCounter value="5x" /> mais rápido
                   </span>
                   <p className="mt-1 text-sm text-slate-600">
                     Consistência diária que gera resultados
@@ -79,7 +80,7 @@ export function PromiseSection() {
                 <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
                 <div className="text-left">
                   <span className="text-lg font-bold text-slate-900">
-                    Reduza procrastinação em 80%
+                    Reduza procrastinação em <AnimatedCounter value="80%" />
                   </span>
                   <p className="mt-1 text-sm text-slate-600">
                     Alguém te cobrando no momento certo

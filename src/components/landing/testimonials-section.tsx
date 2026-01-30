@@ -40,45 +40,74 @@ export function TestimonialsSection() {
             </p>
           </div>
 
-          {/* Testimonials */}
-          <div className="space-y-6">
+          {/* Testimonials - WhatsApp Style */}
+          <div className="space-y-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200"
+                className="rounded-3xl bg-gradient-to-br from-[#ECE5DD] to-[#D9D3CC] p-6 shadow-lg"
               >
-                {/* Stars */}
-                <div className="mb-4 flex items-center justify-between gap-2">
-                  <div className="flex gap-1 text-yellow-500">
-                    <span>★</span>
-                    <span>★</span>
-                    <span>★</span>
-                    <span>★</span>
-                    <span>★</span>
-                  </div>
-                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-wide">
-                    Foi útil?
-                  </span>
-                </div>
-
-                {/* Quote */}
-                <p className="mb-6 text-base leading-relaxed text-slate-700">
-                  &quot;{testimonial.quote}&quot;
-                </p>
-
-                {/* Author */}
-                <div className="flex items-center gap-3">
+                {/* WhatsApp Chat Header */}
+                <div className="mb-4 flex items-center gap-3 rounded-t-2xl bg-[#128C7E] px-4 py-3 -mx-6 -mt-6">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
-                    width={48}
-                    height={48}
-                    className="size-12 rounded-full object-cover"
+                    width={40}
+                    height={40}
+                    className="size-10 rounded-full object-cover ring-2 ring-white"
                   />
-                  <div>
-                    <p className="font-semibold text-slate-900">{testimonial.name}</p>
-                    <p className="text-sm text-slate-600">{testimonial.role}</p>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <p className="font-semibold text-white">{testimonial.name}</p>
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <p className="text-xs text-white/80">{testimonial.role}</p>
                   </div>
+                  <div className="flex gap-1 text-white/80">
+                    <span className="text-xl">⋮</span>
+                  </div>
+                </div>
+
+                {/* Chat Messages */}
+                <div className="space-y-3">
+                  {/* Question from friend */}
+                  <div className="flex justify-start">
+                    <div className="max-w-[85%] rounded-lg rounded-tl-none bg-white px-4 py-3 shadow-sm">
+                      <p className="text-sm text-slate-700">
+                        E aí, como tá sendo usar a Foquinha? 🤔
+                      </p>
+                      <p className="mt-1 text-xs text-slate-400">14:23</p>
+                    </div>
+                  </div>
+
+                  {/* Response - Testimonial */}
+                  <div className="flex justify-end">
+                    <div className="max-w-[85%] rounded-lg rounded-tr-none bg-[#DCF8C6] px-4 py-3 shadow-sm">
+                      <p className="text-sm leading-relaxed text-slate-800">
+                        {testimonial.quote}
+                      </p>
+                      <div className="mt-1 flex items-center justify-end gap-1">
+                        <p className="text-xs text-slate-500">14:25</p>
+                        <span className="text-xs text-[#128C7E]">✓✓</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Reaction */}
+                  <div className="flex justify-start">
+                    <div className="rounded-lg rounded-tl-none bg-white px-4 py-2 shadow-sm">
+                      <p className="text-lg">🔥</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Rating */}
+                <div className="mt-4 flex items-center justify-center gap-1 text-yellow-500">
+                  <span className="text-lg">★</span>
+                  <span className="text-lg">★</span>
+                  <span className="text-lg">★</span>
+                  <span className="text-lg">★</span>
+                  <span className="text-lg">★</span>
                 </div>
               </div>
             ))}

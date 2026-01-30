@@ -23,6 +23,16 @@ export function PricingSimple() {
         <div className="mx-auto max-w-6xl">
           {/* Headline */}
           <div className="mb-12 text-center">
+            {/* Social Proof Badge */}
+            <div className="mb-6 flex justify-center">
+              <div className="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-2">
+                <span className="text-lg">🔥</span>
+                <span className="text-sm font-semibold text-secondary">
+                  Mais de 500 pessoas organizando a vida com a Foquinha
+                </span>
+              </div>
+            </div>
+
             <h2 className="mb-6 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
               Sua agenda organizada no WhatsApp
             </h2>
