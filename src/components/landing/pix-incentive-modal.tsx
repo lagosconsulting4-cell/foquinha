@@ -1,13 +1,12 @@
 'use client'
 
-import { Sparkles, X } from "lucide-react"
+import { X } from "lucide-react"
 import Image from "next/image"
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
 } from "@/components/ui/dialog"
 import { analytics } from "@/lib/analytics"
 

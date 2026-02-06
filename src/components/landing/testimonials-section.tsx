@@ -66,7 +66,7 @@ export function TestimonialsSection() {
                 </div>
 
                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 relative">
-                  <p className="text-slate-700 leading-relaxed italic">"{testimonial.quote}"</p>
+                  <p className="text-slate-700 leading-relaxed italic">&quot;{testimonial.quote}&quot;</p>
 
                   {/* Triangle pointer */}
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-t border-l border-slate-100 transform rotate-45"></div>
