@@ -26,13 +26,14 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
           </div>
 
           {/* Headline Principal */}
+          {/* Headline Principal */}
           <div className="mb-12 text-center">
             <h1 className="mb-6 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              Sua Agenda Inteligente no WhatsApp
+              Sua vida organizada e <span className="text-secondary">2x mais produtiva</span>
             </h1>
 
             <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-700">
-              Pare de esquecer compromissos. Tenha uma agenda que te cobra e organiza suas tarefas onde você já está.
+              Chega de anotar e esquecer. Tenha uma <strong>Agenda Inteligente no WhatsApp</strong> que organiza seus compromissos e te lembra do que importa.
             </p>
           </div>
 

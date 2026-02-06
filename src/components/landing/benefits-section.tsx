@@ -108,9 +108,8 @@ export function BenefitsSection() {
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
-                    className={`size-2 rounded-full transition-all ${
-                      index === currentIndex ? "w-8 bg-secondary" : "bg-slate-300"
-                    }`}
+                    className={`size-2 rounded-full transition-all ${index === currentIndex ? "w-8 bg-secondary" : "bg-slate-300"
+                      }`}
                     aria-label={`Ir para slide ${index + 1}`}
                   />
                 ))}

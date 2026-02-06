@@ -25,6 +25,11 @@ export function GuiltBreakSection() {
             </p>
 
             <div className="mx-auto mt-8 max-w-2xl rounded-2xl bg-gradient-to-r from-green-50 to-emerald-50 p-8 shadow-sm">
+              <div className="mb-4 flex justify-center">
+                <div className="rounded-full bg-white p-3 shadow-sm ring-1 ring-green-100">
+                  <span className="text-3xl">🧩</span>
+                </div>
+              </div>
               <p className="mb-2 text-lg font-semibold text-slate-800">
                 Não é falta de vontade.
               </p>

@@ -45,69 +45,37 @@ export function TestimonialsSection() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="rounded-3xl bg-gradient-to-br from-[#ECE5DD] to-[#D9D3CC] p-6 shadow-lg"
+                className="flex flex-col items-center text-center p-6 bg-slate-50 rounded-3xl"
               >
-                {/* WhatsApp Chat Header */}
-                <div className="mb-4 flex items-center gap-3 rounded-t-2xl bg-[#128C7E] px-4 py-3 -mx-6 -mt-6">
+                <div className="relative mb-4">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
-                    width={40}
-                    height={40}
-                    className="size-10 rounded-full object-cover ring-2 ring-white"
+                    width={80}
+                    height={80}
+                    className="rounded-full object-cover ring-4 ring-white shadow-md size-20"
                   />
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2">
-                      <p className="font-semibold text-white">{testimonial.name}</p>
-                      <span className="text-white text-xs">✓</span>
-                    </div>
-                    <p className="text-xs text-white/80">{testimonial.role}</p>
-                  </div>
-                  <div className="flex gap-1 text-white/80">
-                    <span className="text-xl">⋮</span>
+                  <div className="absolute -bottom-2 -right-2 bg-[#25D366] text-white p-1 rounded-full border-2 border-white">
+                    <span className="text-xs font-bold">✓</span>
                   </div>
                 </div>
 
-                {/* Chat Messages */}
-                <div className="space-y-3">
-                  {/* Question from friend */}
-                  <div className="flex justify-start">
-                    <div className="max-w-[85%] rounded-lg rounded-tl-none bg-white px-4 py-3 shadow-sm">
-                      <p className="text-sm text-slate-700">
-                        E aí, como tá sendo usar a Foquinha? 🤔
-                      </p>
-                      <p className="mt-1 text-xs text-slate-400">14:23</p>
-                    </div>
-                  </div>
-
-                  {/* Response - Testimonial */}
-                  <div className="flex justify-end">
-                    <div className="max-w-[85%] rounded-lg rounded-tr-none bg-[#DCF8C6] px-4 py-3 shadow-sm">
-                      <p className="text-sm leading-relaxed text-slate-800">
-                        {testimonial.quote}
-                      </p>
-                      <div className="mt-1 flex items-center justify-end gap-1">
-                        <p className="text-xs text-slate-500">14:25</p>
-                        <span className="text-xs text-[#128C7E]">✓✓</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Reaction */}
-                  <div className="flex justify-start">
-                    <div className="rounded-lg rounded-tl-none bg-white px-4 py-2 shadow-sm">
-                      <p className="text-lg">🔥</p>
-                    </div>
-                  </div>
+                <div className="mb-4">
+                  <p className="font-bold text-slate-900 text-lg">{testimonial.name}</p>
+                  <p className="text-sm text-slate-500">{testimonial.role}</p>
                 </div>
 
-                {/* Rating */}
-                <div className="mt-4 flex items-center justify-center gap-1 text-yellow-500">
-                  <span className="text-lg">★</span>
-                  <span className="text-lg">★</span>
-                  <span className="text-lg">★</span>
-                  <span className="text-lg">★</span>
-                  <span className="text-lg">★</span>
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 relative">
+                  <p className="text-slate-700 leading-relaxed italic">"{testimonial.quote}"</p>
+
+                  {/* Triangle pointer */}
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-t border-l border-slate-100 transform rotate-45"></div>
+                </div>
+
+                <div className="mt-4 flex gap-1 text-yellow-500">
+                  {[1, 2, 3, 4, 5].map((s) => (
+                    <span key={s} className="text-sm">★</span>
+                  ))}
                 </div>
               </div>
             ))}

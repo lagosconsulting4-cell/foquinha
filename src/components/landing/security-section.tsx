@@ -19,10 +19,10 @@ export function SecuritySection() {
               <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
               <div className="text-left">
                 <p className="text-lg font-bold text-slate-900">
-                  Funciona 100% no WhatsApp
+                  100% Seguro e Privado
                 </p>
                 <p className="mt-1 text-sm text-slate-600">
-                  Sem baixar app, sem criar conta
+                  Seus dados são seus. Criptomilitares e total privacidade.
                 </p>
               </div>
             </div>
@@ -43,7 +43,7 @@ export function SecuritySection() {
               <Check className="size-6 flex-shrink-0 text-secondary" strokeWidth={2.5} />
               <div className="text-left">
                 <p className="text-lg font-bold text-slate-900">
-                  Cobrança ativa que te mantém no ritmo
+                  Lembretes ativos que te mantêm no ritmo
                 </p>
                 <p className="mt-1 text-sm text-slate-600">
                   Lembretes inteligentes no momento certo

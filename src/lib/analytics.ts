@@ -2,7 +2,7 @@ import posthog from 'posthog-js'
 
 export const analytics = {
   // Eventos de visualização de seções (para funil)
-  trackSectionViewed: (section: 'hero' | 'problem' | 'guilt-break' | 'solution' | 'benefits' | 'promise' | 'testimonials' | 'security' | 'pricing' | 'final') => {
+  trackSectionViewed: (section: 'hero' | 'problem' | 'guilt-break' | 'solution' | 'benefits' | 'promise' | 'comparison' | 'testimonials' | 'security' | 'pricing' | 'final') => {
     posthog.capture('section_viewed', {
       section,
       timestamp: new Date().toISOString(),

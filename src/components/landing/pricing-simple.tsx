@@ -7,10 +7,10 @@ import { analytics } from "@/lib/analytics"
 export function PricingSimple() {
   // Links de checkout
   const MONTHLY_LINK = "https://buy.stripe.com/5kQ5kDbHmg1Q0k8eG09oc0c"
-  const ANNUAL_CARD_LINK = "https://payfast.greenn.com.br/154675/offer/lkH71W"
+  const ANNUAL_CARD_LINK = "https://pay.kirvano.com/84f6a23b-ab61-4e1f-b9c5-9bec18bee665"
 
   const benefits = [
-    { text: "Cobrança Ativa", annualOnly: true, bold: true },
+    { text: "Lembretes Ativos", annualOnly: true, bold: true },
     { text: "Agenda no WhatsApp" },
     { text: "Reorganização se atrasar" },
     { text: "Resumo semanal" },
