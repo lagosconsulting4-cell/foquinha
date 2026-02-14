@@ -7,6 +7,7 @@ import { BenefitsSection } from "@/components/landing/benefits-section"
 import { PromiseSection } from "@/components/landing/promise-section"
 import { ComparisonSection } from "@/components/landing/comparison-section"
 import { TestimonialsSection } from "@/components/landing/testimonials-section"
+import { AvailabilityBadge } from "@/components/landing/availability-badge"
 import { SecuritySection } from "@/components/landing/security-section"
 import { PricingSimple } from "@/components/landing/pricing-simple"
 import { StickyCtaBar } from "@/components/landing/sticky-cta-bar"
@@ -30,6 +31,7 @@ export default function Home() {
         <BenefitsSection />
         <PromiseSection />
         <TestimonialsSection />
+        <AvailabilityBadge />
         <SecuritySection />
         <PricingSimple />
       </main>

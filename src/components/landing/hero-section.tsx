@@ -25,15 +25,14 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
             />
           </div>
 
-          {/* Headline Principal */}
-          {/* Headline Principal */}
+          {/* Headline Principal - Tom Positivo */}
           <div className="mb-12 text-center">
             <h1 className="mb-6 text-4xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              Sua vida organizada e <span className="text-secondary">2x mais produtiva</span>
+              Ganhe <span className="text-secondary">2h a mais</span> no seu dia, organizando tudo no WhatsApp
             </h1>
 
             <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-700">
-              Chega de anotar e esquecer. Tenha uma <strong>Agenda Inteligente no WhatsApp</strong> que organiza seus compromissos e te lembra do que importa.
+              Chega de apps complicados e planilhas esquecidas. Tenha uma <strong>Agenda Inteligente</strong> que organiza sua vida direto no WhatsApp — em segundos.
             </p>
           </div>
 
@@ -58,7 +57,7 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
           <div className="mb-6 flex justify-center">
             <CtaButton
               href={ctaHref}
-              label="Quero minha agenda no Zap"
+              label="Quero ganhar 2h por dia"
               trackingLocation="hero"
               className="w-full rounded-xl bg-[#25D366] px-8 py-4 text-center text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-[#1DAA53] sm:w-auto"
             />

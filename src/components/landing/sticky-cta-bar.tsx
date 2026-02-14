@@ -41,7 +41,7 @@ export function StickyCtaBar({ ctaHref }: StickyCtaBarProps) {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center">
             <p className="text-sm font-bold text-white sm:text-base">
-              Organização que chega até você, direto no zap
+              Ganhe 2h por dia, organizando tudo no WhatsApp
             </p>
           </div>
 
@@ -50,7 +50,7 @@ export function StickyCtaBar({ ctaHref }: StickyCtaBarProps) {
             onClick={handleClick}
             className="group flex items-center gap-2 whitespace-nowrap rounded-full bg-white px-4 py-2.5 text-xs font-bold uppercase tracking-wide text-[#128C7E] transition-all hover:scale-105 hover:bg-[#128C7E] hover:text-white hover:shadow-xl sm:px-6 sm:py-3 sm:text-sm"
           >
-            <span>Quero minha agenda no Zap</span>
+            <span>Quero ganhar 2h por dia</span>
           </a>
         </div>
       </div>

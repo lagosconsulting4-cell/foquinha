@@ -7,13 +7,13 @@ import { analytics } from "@/lib/analytics"
 export function PricingSimple() {
   // Links de checkout
   const MONTHLY_LINK = "https://buy.stripe.com/5kQ5kDbHmg1Q0k8eG09oc0c"
-  const ANNUAL_CARD_LINK = "https://pay.kirvano.com/84f6a23b-ab61-4e1f-b9c5-9bec18bee665"
+  const ANNUAL_CARD_LINK = "https://pay.hub.la/wvhwpp4v3XqnkIiQgJmc"
 
   const benefits = [
-    { text: "Lembretes Ativos", annualOnly: true, bold: true },
-    { text: "Agenda no WhatsApp" },
-    { text: "Reorganização se atrasar" },
-    { text: "Resumo semanal" },
+    { text: "2h por dia de volta", annualOnly: true, bold: true },
+    { text: "Organização em 10 segundos" },
+    { text: "Reorganização automática" },
+    { text: "Relatórios automáticos" },
     { text: "Suporte no zap" },
   ]
 
@@ -23,21 +23,11 @@ export function PricingSimple() {
         <div className="mx-auto max-w-6xl">
           {/* Headline */}
           <div className="mb-12 text-center">
-            {/* Social Proof Badge */}
-            <div className="mb-6 flex justify-center">
-              <div className="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-2">
-                <span className="text-lg">🔥</span>
-                <span className="text-sm font-semibold text-secondary">
-                  Mais de 500 pessoas organizando a vida com a Foquinha
-                </span>
-              </div>
-            </div>
-
             <h2 className="mb-6 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
-              Sua agenda organizada no WhatsApp
+              Ganhe 2 horas extras todo dia
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-slate-700">
-              Escolha o plano que cabe na sua rotina
+              Escolha seu plano e comece hoje
             </p>
           </div>
 
@@ -46,17 +36,29 @@ export function PricingSimple() {
             {/* Card Anual - DESTAQUE */}
             <div className="relative flex flex-col rounded-3xl bg-gradient-to-br from-secondary/10 to-secondary/5 p-8 shadow-2xl ring-2 ring-secondary/30 transition-all hover:scale-105 hover:shadow-secondary/20">
               <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-secondary px-4 py-1 text-sm font-bold text-white">
-                50% OFF
+                MAIS POPULAR - 50% OFF
               </span>
 
               <div className="flex-grow">
                 <div className="text-center">
                   <h3 className="mb-2 text-2xl font-bold text-slate-800">ACESSO ANUAL</h3>
-                  <p className="mb-2 text-sm font-semibold text-slate-600">Custa menos que um café por mês</p>
+
+                  {/* Ancoragem de Preço Visual - estilo Porquim */}
+                  <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-amber-50 px-4 py-2">
+                    <span className="text-2xl">☕</span>
+                    <p className="text-sm font-semibold text-amber-900">Menos que um café por mês</p>
+                  </div>
+
                   <p className="mb-1 text-sm text-slate-400 line-through">De R$ 19,90/mês</p>
-                  <p className="mb-6 text-6xl font-bold text-secondary">
-                    R$ 9,97 <span className="text-lg font-medium text-slate-500">/mês</span>
+                  <p className="mb-2 text-6xl font-bold text-secondary">
+                    R$ 8,84 <span className="text-lg font-medium text-slate-500">/mês</span>
                   </p>
+
+                  {/* Tempo economizado destacado */}
+                  <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-green-50 px-4 py-2">
+                    <span className="text-xl">⏰</span>
+                    <p className="text-sm font-bold text-green-700">730 horas extras por ano = 30 dias!</p>
+                  </div>
                 </div>
 
                 {/* Benefícios */}
@@ -77,10 +79,10 @@ export function PricingSimple() {
                 href={ANNUAL_CARD_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => analytics.track('cta_click', { location: 'pricing_annual_card', cta_text: 'Quero minha agenda no Zap' })}
+                onClick={() => analytics.track('cta_click', { location: 'pricing_annual_card', cta_text: 'Quero ganhar 2h por dia' })}
                 className="block w-full rounded-xl bg-secondary px-8 py-4 text-center text-lg font-bold text-white shadow-xl transition-all hover:scale-105 hover:bg-secondary/90"
               >
-                Quero minha agenda no Zap
+                Quero ganhar 2h por dia
               </a>
             </div>
 
@@ -98,10 +100,10 @@ export function PricingSimple() {
                 href={MONTHLY_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => analytics.track('cta_click', { location: 'pricing_monthly', cta_text: 'Assinar Mensal' })}
+                onClick={() => analytics.track('cta_click', { location: 'pricing_monthly', cta_text: 'Começar agora' })}
                 className="block w-full rounded-xl bg-slate-200 px-8 py-4 text-center text-base font-bold text-slate-800 shadow-lg transition-all hover:scale-105 hover:bg-slate-300"
               >
-                Assinar Mensal
+                Começar agora
               </a>
             </div>
           </div>

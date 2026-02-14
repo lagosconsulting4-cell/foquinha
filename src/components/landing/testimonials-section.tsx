@@ -6,21 +6,21 @@ const testimonials = [
     name: "Lucas M.",
     role: "Dev Jr., 22 anos",
     quote:
-      "Entre a faculdade e o trampo de dev, minha cabeça virava um caos. Esquecia das dailies, das entregas... com a Foquinha no zap, tudo mudou. Ela me manda o que preciso fazer e quando, sem eu ter que abrir Trello ou Notion. É o fim da ansiedade.",
+      "Com as 2h que eu ganhei, consegui fazer aquele curso de React que tava empurrando faz meses. Já subi de nível no trampo e ainda sobra tempo pra malhar. A Foquinha literalmente mudou minha vida.",
     image: "https://i.ibb.co/spy6CscW/Luan-estudante.webp",
   },
   {
     name: "Julia S.",
     role: "Empreendedora, 24 anos",
     quote:
-      "Tocar minha loja online sozinha é uma loucura. Cliente, fornecedor, postar... eu vivia nos post-its. Agora, só jogo tudo na Foquinha pelo zap. Ela organiza e me cobra. Minha produtividade dobrou, sério.",
+      "O tempo que eu economizei foi direto pra prospectar clientes e criar conteúdo. Faturamento subiu 40% em 2 meses. Hoje consigo tocar a loja E ter tempo pra mim. Melhor investimento que fiz.",
     image: "https://i.ibb.co/wF2zkBZt/julia-psicologa.webp",
   },
   {
     name: "Bia G.",
     role: "Estudante e Social Media, 20 anos",
     quote:
-      "Conciliar os trabalhos da faculdade com os freelas de social media era impossível. Vivia perdendo prazo. A Foquinha virou meu cérebro. Jogo uma tarefa lá e esqueço. Ela me lembra na hora certa. Salvou meu semestre e meus clientes.",
+      "Sobrou tempo até pra academia e pra assistir série! Antes era impossível encaixar. Com a Foquinha organizando tudo em segundos, tenho tempo pra TCC, freelas E vida pessoal. Não volto mais pro caos.",
     image: "https://i.ibb.co/b5nSxRWm/mariana-designer.webp",
   },
 ] as const
@@ -33,10 +33,10 @@ export function TestimonialsSection() {
           {/* Header */}
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
-              Veja só o que a galera que usa a Foquinha está dizendo
+              Veja o que as pessoas estão fazendo com as 2h extras
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-slate-700">
-              pessoas como você usando a Foquinha pra não surtar na correria
+              Tempo de volta, conquistas reais
             </p>
           </div>
 

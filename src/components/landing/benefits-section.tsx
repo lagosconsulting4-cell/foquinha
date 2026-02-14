@@ -1,8 +1,4 @@
-"use client"
-
 import Image from "next/image"
-import { useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import { SectionTracker } from "@/components/analytics/section-tracker"
 
 const benefits = [
@@ -45,86 +41,49 @@ const benefits = [
 ] as const
 
 export function BenefitsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-  const next = () => {
-    setCurrentIndex((prev) => (prev + 1) % benefits.length)
-  }
-
-  const prev = () => {
-    setCurrentIndex((prev) => (prev - 1 + benefits.length) % benefits.length)
-  }
-
-  const current = benefits[currentIndex]
-
   return (
     <SectionTracker sectionId="benefits">
       <section className="bg-white px-4 pb-16 pt-8 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-6xl">
           {/* Título */}
-          <div className="mb-12 text-center">
+          <div className="mb-16 text-center">
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
               Funciona assim:
             </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+              Tudo que você precisa, sem complicação
+            </p>
           </div>
 
-          {/* Carrossel */}
-          <div className="relative">
-            {/* Imagem */}
-            <div className="mb-8">
-              <div className="relative mx-auto max-w-[280px] sm:max-w-sm">
-                <Image
-                  src={current.image}
-                  alt={current.title}
-                  width={600}
-                  height={1200}
-                  className="w-full object-contain drop-shadow-2xl"
-                />
+          {/* Grid de Benefícios - 2x3 no desktop, stack no mobile */}
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:gap-16">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex flex-col items-center text-center">
+                {/* Imagem Grande */}
+                <div className="mb-6">
+                  <div className="relative mx-auto max-w-[280px] sm:max-w-sm">
+                    <Image
+                      src={benefit.image}
+                      alt={benefit.title}
+                      width={600}
+                      height={1200}
+                      className="w-full object-contain drop-shadow-2xl"
+                      loading={index < 2 ? "eager" : "lazy"}
+                    />
+                  </div>
+                </div>
+
+                {/* Texto */}
+                <div>
+                  <div className="mb-3 text-3xl">{benefit.step}</div>
+                  <h3 className="mb-2 text-xl font-bold text-slate-900 sm:text-2xl">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-base text-slate-600">{benefit.description}</p>
+                </div>
               </div>
-            </div>
-
-            {/* Texto */}
-            <div className="mb-8 text-center">
-              <div className="mb-3 text-3xl">{current.step}</div>
-              <h3 className="mb-2 text-xl font-bold text-slate-900 sm:text-2xl">
-                {current.title}
-              </h3>
-              <p className="text-base text-slate-600">{current.description}</p>
-            </div>
-
-            {/* Controles */}
-            <div className="flex items-center justify-center gap-4">
-              <button
-                onClick={prev}
-                className="flex size-12 items-center justify-center rounded-full bg-secondary/10 text-secondary transition-all hover:bg-secondary hover:text-white"
-                aria-label="Anterior"
-              >
-                <ChevronLeft className="size-6" />
-              </button>
-
-              {/* Indicadores */}
-              <div className="flex gap-2">
-                {benefits.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`size-2 rounded-full transition-all ${index === currentIndex ? "w-8 bg-secondary" : "bg-slate-300"
-                      }`}
-                    aria-label={`Ir para slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={next}
-                className="flex size-12 items-center justify-center rounded-full bg-secondary/10 text-secondary transition-all hover:bg-secondary hover:text-white"
-                aria-label="Próximo"
-              >
-                <ChevronRight className="size-6" />
-              </button>
-            </div>
+            ))}
           </div>
-
         </div>
       </section>
     </SectionTracker>
