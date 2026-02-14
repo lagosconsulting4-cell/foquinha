@@ -23,7 +23,7 @@ export function ProblemSection() {
               <div className="mb-4 text-5xl">📚</div>
               <h3 className="mb-2 text-lg font-bold text-slate-900">Aprender algo novo</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Aquele curso, idioma ou skill que você sempre quis mas "não tem tempo".
+                Aquele curso, idioma ou skill que você sempre quis mas &quot;não tem tempo&quot;.
               </p>
             </div>
 
