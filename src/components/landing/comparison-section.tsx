@@ -1,4 +1,3 @@
-import { Check, X } from "lucide-react"
 import { SectionTracker } from "@/components/analytics/section-tracker"
 
 export function ComparisonSection() {
