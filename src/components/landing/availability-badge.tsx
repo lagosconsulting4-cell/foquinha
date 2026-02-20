@@ -1,29 +1,49 @@
-import { Clock, MessageCircle } from "lucide-react"
+"use client"
+
+import React from "react"
+import Image from "next/image"
+import Autoplay from "embla-carousel-autoplay"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+} from "@/components/ui/carousel"
+
+const images = [
+    { src: "https://i.ibb.co/YFbPQDxt/2-site-Foquinha-3.png", alt: "Foquinha feature" },
+    { src: "https://i.ibb.co/pvFr8rkt/2-site-Foquinha-2.png", alt: "Foquinha feature" },
+    { src: "https://i.ibb.co/XkM9JdDJ/2-site-Foquinha-1.png", alt: "Foquinha feature" },
+]
 
 export function AvailabilityBadge() {
-  return (
-    <section className="bg-white px-4 py-8 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-4xl">
-        <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-8">
-          {/* Badge 1 - 100% WhatsApp */}
-          <div className="flex items-center gap-3 rounded-2xl bg-[#25D366]/10 px-6 py-4 shadow-md ring-2 ring-[#25D366]/20 transition-all hover:scale-105 hover:shadow-lg">
-            <MessageCircle className="size-8 text-[#25D366]" strokeWidth={2.5} />
-            <div className="text-left">
-              <p className="text-sm font-medium text-slate-600">100% via</p>
-              <p className="text-xl font-bold text-slate-900">WhatsApp</p>
-            </div>
-          </div>
+    const plugin = React.useRef(
+        Autoplay({ delay: 2200, stopOnInteraction: false })
+    )
 
-          {/* Badge 2 - Disponível 24h */}
-          <div className="flex items-center gap-3 rounded-2xl bg-secondary/10 px-6 py-4 shadow-md ring-2 ring-secondary/20 transition-all hover:scale-105 hover:shadow-lg">
-            <Clock className="size-8 text-secondary" strokeWidth={2.5} />
-            <div className="text-left">
-              <p className="text-sm font-medium text-slate-600">Disponível</p>
-              <p className="text-xl font-bold text-slate-900">24 horas</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+    return (
+        <section className="bg-white py-8">
+            <Carousel
+                plugins={[plugin.current]}
+                opts={{ loop: true, align: "center" }}
+                className="w-full"
+            >
+                <CarouselContent className="-ml-6">
+                    {images.map((img, i) => (
+                        <CarouselItem key={i} className="pl-6 basis-[75%] sm:basis-[50%] md:basis-[38%]">
+                            <div className="mx-auto max-w-[238px] overflow-hidden rounded-xl" style={{ maxHeight: "180px" }}>
+                                <Image
+                                    src={img.src}
+                                    alt={img.alt}
+                                    width={476}
+                                    height={360}
+                                    className="w-full h-auto object-cover object-top"
+                                    loading="lazy"
+                                />
+                            </div>
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+            </Carousel>
+        </section>
+    )
 }

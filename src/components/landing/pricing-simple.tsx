@@ -10,11 +10,12 @@ export function PricingSimple() {
   const ANNUAL_CARD_LINK = "https://pay.hub.la/wvhwpp4v3XqnkIiQgJmc"
 
   const benefits = [
-    { text: "2h por dia de volta", annualOnly: true, bold: true },
-    { text: "Organização em 10 segundos" },
-    { text: "Reorganização automática" },
-    { text: "Relatórios automáticos" },
-    { text: "Suporte no zap" },
+    { text: "2h por dia de volta", bold: true },
+    { text: "Acesso ilimitado" },
+    { text: "Lembretes direto no WhatsApp" },
+    { text: "Reorganização automática do dia" },
+    { text: "Relatórios personalizados" },
+    { text: "Suporte direto no zap" },
   ]
 
   return (

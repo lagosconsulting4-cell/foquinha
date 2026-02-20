@@ -5,7 +5,6 @@ import { HeroSection } from "@/components/landing/hero-section"
 import { ProblemSection } from "@/components/landing/problem-section"
 import { BenefitsSection } from "@/components/landing/benefits-section"
 import { PromiseSection } from "@/components/landing/promise-section"
-import { ComparisonSection } from "@/components/landing/comparison-section"
 import { TestimonialsSection } from "@/components/landing/testimonials-section"
 import { AvailabilityBadge } from "@/components/landing/availability-badge"
 import { SecuritySection } from "@/components/landing/security-section"
@@ -27,7 +26,6 @@ export default function Home() {
       <main className="flex flex-col gap-0">
         <HeroSection ctaHref={pricingAnchor} />
         <ProblemSection />
-        <ComparisonSection />
         <BenefitsSection />
         <PromiseSection />
         <TestimonialsSection />
