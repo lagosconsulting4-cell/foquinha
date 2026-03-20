@@ -1,13 +1,26 @@
 'use client'
 
 import { Check, Shield } from "lucide-react"
+import { useEffect, useState } from "react"
 import { SectionTracker } from "@/components/analytics/section-tracker"
 import { analytics } from "@/lib/analytics"
 
 export function PricingSimple() {
-  // Links de checkout
-  const MONTHLY_LINK = "https://buy.stripe.com/5kQ5kDbHmg1Q0k8eG09oc0c"
-  const ANNUAL_CARD_LINK = "https://pay.hub.la/wvhwpp4v3XqnkIiQgJmc"
+  const baseUrlMonthly = "https://buy.stripe.com/5kQ5kDbHmg1Q0k8eG09oc0c"
+  const baseUrlAnnual = "https://pay.hub.la/wvhwpp4v3XqnkIiQgJmc"
+
+  const [monthlyLink, setMonthlyLink] = useState(baseUrlMonthly)
+  const [annualLink, setAnnualLink] = useState(baseUrlAnnual)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const searchParams = window.location.search
+      if (searchParams) {
+        setMonthlyLink(`${baseUrlMonthly}${searchParams}`)
+        setAnnualLink(`${baseUrlAnnual}${searchParams}`)
+      }
+    }
+  }, [])
 
   const benefits = [
     { text: "2h por dia de volta", bold: true },
@@ -77,7 +90,7 @@ export function PricingSimple() {
 
               {/* CTA */}
               <a
-                href={ANNUAL_CARD_LINK}
+                href={annualLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => analytics.track('cta_click', { location: 'pricing_annual_card', cta_text: 'Quero ganhar 2h por dia' })}
@@ -98,7 +111,7 @@ export function PricingSimple() {
                 </div>
               </div>
               <a
-                href={MONTHLY_LINK}
+                href={monthlyLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => analytics.track('cta_click', { location: 'pricing_monthly', cta_text: 'Começar agora' })}
