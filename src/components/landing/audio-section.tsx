@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { SectionTracker } from "@/components/analytics/section-tracker"
-import { Mic, CheckCircle2 } from "lucide-react"
+import { CheckCircle2 } from "lucide-react"
 
 export function AudioSection() {
   return (
@@ -50,7 +50,7 @@ export function AudioSection() {
                 <CheckCircle2 className="size-6 flex-shrink-0 text-secondary" />
                 <div>
                   <h3 className="text-base font-bold text-slate-900">Lembretes com horário</h3>
-                  <p className="mt-0.5 text-sm text-slate-600 leading-relaxed">"Me avisa pra tirar a carne do freezer daqui 2 horas".</p>
+                  <p className="mt-0.5 text-sm text-slate-600 leading-relaxed">&quot;Me avisa pra tirar a carne do freezer daqui 2 horas&quot;.</p>
                 </div>
               </div>
             </div>
