@@ -32,12 +32,12 @@ const rows = [
 export function BenefitsSection() {
   return (
     <SectionTracker sectionId="benefits">
-      <section id="funciona" className="bg-white py-16 px-4 sm:px-6 lg:px-8 border-t border-[rgba(26,35,30,0.05)]">
+      <section id="funciona" className="bg-white py-8 px-4 sm:px-6 md:py-16 lg:px-8 border-t border-[rgba(26,35,30,0.05)]">
         <div className="mx-auto max-w-5xl">
 
           {/* Headline */}
           <div className="mb-16 text-center">
-            <h2 className="text-3xl font-black tracking-tighter text-slate-900 md:text-6xl">
+            <h2 className="text-2xl font-black tracking-tighter text-slate-900 md:text-6xl">
               Organizar sua vida <br /> <span className="text-[#25d366]">nunca foi tão fácil.</span>
             </h2>
           </div>
@@ -49,12 +49,12 @@ export function BenefitsSection() {
                 
                 <div className="flex-1 w-full scale-100">
                   <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
-                    <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-[#25d366] text-white shadow-[0_10px_20px_-10px_rgba(37,211,102,0.3)]">
-                      <span className="text-xl font-black">{benefit.step}</span>
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#25d366] text-white shadow-[0_10px_20px_-10px_rgba(37,211,102,0.3)] md:size-14 md:rounded-2xl">
+                      <span className="text-lg font-black md:text-xl">{benefit.step}</span>
                     </div>
-                                        <h3 className="text-xl font-black tracking-tight text-slate-900 leading-tight md:text-4xl">{benefit.title}</h3>
+                                        <h3 className="text-lg font-black tracking-tight text-slate-900 leading-tight md:text-4xl">{benefit.title}</h3>
                   </div>
-                  <p className="mt-4 text-lg font-medium text-slate-600 leading-relaxed text-center md:text-left md:text-xl">{benefit.description}</p>
+                  <p className="mt-3 text-base font-medium text-slate-600 leading-relaxed text-center md:text-left md:text-xl md:mt-4">{benefit.description}</p>
                 </div>
                 
                 <div className="w-full relative rounded-2xl overflow-hidden shadow-xl flex-1 border border-white/40">

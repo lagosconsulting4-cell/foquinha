@@ -9,9 +9,9 @@ interface FinalSectionProps {
 export function FinalSection({ ctaHref }: FinalSectionProps) {
   return (
     <SectionTracker sectionId="final">
-      <section className="bg-gradient-to-b from-white to-slate-50 px-4 py-12 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-b from-white to-slate-50 px-4 py-8 sm:px-6 md:py-12 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-6 text-3xl font-black tracking-tighter text-slate-900 md:text-6xl">
+          <h2 className="mb-4 text-2xl font-black tracking-tighter text-slate-900 md:text-6xl md:mb-6">
             Sua vida já acontece no WhatsApp.
             <br />
             Agora sua organização também.

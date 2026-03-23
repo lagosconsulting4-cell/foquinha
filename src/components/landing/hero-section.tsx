@@ -11,33 +11,33 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
     <SectionTracker sectionId="hero">
       <section
         id="hero"
-        className="relative overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-8"
+        className="relative overflow-hidden bg-white px-4 py-8 sm:px-6 md:py-16 lg:px-8"
       >
         <div className="mx-auto max-w-5xl relative z-10">
           {/* Logo */}
-          <div className="mb-10 flex justify-center">
+          <div className="mb-6 flex justify-center md:mb-10">
             <Image
               src="/logo.png"
               alt="Foquinha IA"
-              width={90}
-              height={90}
-              className="object-contain"
+              width={70}
+              height={70}
+              className="object-contain md:w-[90px] md:h-[90px]"
             />
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <h1 className="mb-6 text-3xl font-black tracking-tighter text-slate-900 md:text-5xl lg:text-6xl leading-[1.05]">
+            <h1 className="mb-4 text-2xl font-black tracking-tighter text-slate-900 md:text-5xl lg:text-6xl leading-[1.05] md:mb-6">
               Ganhe 2h extras por dia <br className="hidden md:block" />
               <span className="text-[#25d366]">organizando tudo no WhatsApp.</span>
             </h1>
 
-            <p className="mx-auto max-w-xl text-lg leading-relaxed text-slate-600 font-medium font-sans">
+            <p className="mx-auto max-w-xl text-base leading-relaxed text-slate-600 font-medium font-sans md:text-lg">
               Mande uma mensagem e a Foquinha organiza sua agenda em segundos. <br className="hidden md:block" />
               Sem apps complexos. Tudo no lugar que você já usa.
             </p>
           </div>
 
-          <div className="mx-auto mt-12 max-w-4xl">
+          <div className="mx-auto mt-8 max-w-4xl md:mt-12">
             <div className="overflow-hidden rounded-[2.5rem]">
               <Image
                 src="/hero_mockup_new.png"
@@ -52,7 +52,7 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col items-center justify-center">
+          <div className="mt-8 flex flex-col items-center justify-center md:mt-12">
             <CtaButton
               href={ctaHref}
               label="Quero ganhar 2h por dia"

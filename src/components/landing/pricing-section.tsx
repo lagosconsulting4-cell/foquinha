@@ -12,13 +12,13 @@ interface PricingSectionProps {
 
 export function PricingSection({ ctaHref, secondaryCtaHref }: PricingSectionProps) {
   return (
-    <section className="py-12 md:py-24">
+    <section className="py-8 md:py-24">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-2xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl text-center">
+          <h2 className="text-xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl text-center">
             💸 Quanto vale organizar sua vida de forma real?
           </h2>
-          <div className="mx-auto mt-12 grid max-w-2xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto mt-8 grid max-w-2xl gap-4 sm:grid-cols-2 lg:grid-cols-4 md:mt-12 md:gap-6">
             <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-lg transition-all hover:shadow-xl md:p-6">
               <div className="text-center">
                 <div className="text-2xl font-bold text-foreground">R$800</div>
@@ -49,12 +49,12 @@ export function PricingSection({ ctaHref, secondaryCtaHref }: PricingSectionProp
             </div>
           </div>
           <div className="mx-auto mt-8 max-w-md rounded-2xl bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 p-6 text-center">
-            <div className="text-2xl font-bold text-red-600 md:text-3xl">💣 R$2.300+</div>
+            <div className="text-xl font-bold text-red-600 md:text-3xl">💣 R$2.300+</div>
             <div className="mt-1 text-sm font-medium text-red-700">Valor total por mês</div>
           </div>
 
           <Card className="mx-auto mt-12 max-w-lg border-2 border-secondary/20 bg-gradient-to-br from-white to-secondary/5 shadow-2xl">
-            <CardContent className="space-y-6 p-4 text-center md:space-y-8 md:p-8">
+            <CardContent className="space-y-4 p-4 text-center md:space-y-8 md:p-8">
               <div className="space-y-2">
                 <div className="text-lg font-medium text-foreground">
                   Mas você leva tudo isso por:
@@ -63,7 +63,7 @@ export function PricingSection({ ctaHref, secondaryCtaHref }: PricingSectionProp
 
               <div className="space-y-3">
                 <div className="text-sm font-medium text-muted-foreground line-through">De R$29,00/mês</div>
-                                <div className="text-4xl font-bold text-foreground md:text-5xl">12x de R$ 9,00</div>
+                                <div className="text-3xl font-bold text-foreground md:text-5xl">12x de R$ 9,00</div>
                 <div className="text-xl text-muted-foreground">ou R$87 por ano</div>
                 <div className="mx-auto w-16 h-1 bg-secondary rounded-full"></div>
               </div>
@@ -116,7 +116,7 @@ export function PricingSection({ ctaHref, secondaryCtaHref }: PricingSectionProp
           </Card>
 
           <div className="mt-16 space-y-4">
-            <h3 className="text-2xl font-semibold text-foreground sm:text-3xl">
+            <h3 className="text-lg font-semibold text-foreground md:text-3xl">
               Comece com leveza. Continue com resultado.
             </h3>
             <p className="mx-auto max-w-xl text-muted-foreground">
