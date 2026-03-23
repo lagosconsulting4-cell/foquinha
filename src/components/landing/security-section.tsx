@@ -21,7 +21,7 @@ export function SecuritySection() {
               { icon: <EyeOff className="size-6 text-[#25d366]" />, title: "Controle", desc: "Exclua suas conversas e dados quando quiser" }
             ].map((item, i) => (
               <div key={i} className="group relative flex flex-col items-center text-center rounded-[2.5rem] bg-white p-6 md:p-10 shadow-[0_20px_40px_-15px_rgba(26,35,30,0.05)] ring-1 ring-slate-100 transition-all hover:scale-[1.02] hover:shadow-[0_40px_80px_-20px_rgba(26,35,30,0.1)]">
-                <div className="mb-8 flex size-16 items-center justify-center rounded-3xl bg-slate-50 transition-colors group-hover:bg-[#25d366]/10">
+                <div className="mb-8 flex size-12 items-center justify-center rounded-3xl bg-slate-50 transition-colors group-hover:bg-[#25d366]/10 md:size-16">
                   {item.icon}
                 </div>
                 <h3 className="mb-3 text-xl font-black text-slate-900">{item.title}</h3>
