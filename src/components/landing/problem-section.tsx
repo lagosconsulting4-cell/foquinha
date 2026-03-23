@@ -8,10 +8,10 @@ export function ProblemSection() {
 
           {/* Headline Aspiracional */}
           <div className="mb-16 text-center">
-            <h2 className="text-4xl font-bold tracking-tighter text-slate-900 md:text-5xl lg:text-6xl">
+            <h2 className="text-3xl font-bold tracking-tighter text-slate-900 md:text-5xl lg:text-6xl">
               E se você tivesse 2 horas extras todo dia?
             </h2>
-            <p className="mt-6 text-2xl font-medium text-[#25d366]">
+            <p className="mt-6 text-xl font-medium text-[#25d366] md:text-2xl">
               Pensa no que você poderia fazer:
             </p>
           </div>

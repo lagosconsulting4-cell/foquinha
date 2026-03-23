@@ -37,7 +37,7 @@ export function BenefitsSection() {
 
           {/* Headline */}
           <div className="mb-16 text-center">
-            <h2 className="text-4xl font-black tracking-tighter text-slate-900 md:text-6xl">
+            <h2 className="text-3xl font-black tracking-tighter text-slate-900 md:text-6xl">
               Organizar sua vida <br /> <span className="text-[#25d366]">nunca foi tão fácil.</span>
             </h2>
           </div>
@@ -54,7 +54,7 @@ export function BenefitsSection() {
                     </div>
                     <h3 className="text-2xl font-black tracking-tight text-slate-900 leading-tight md:text-4xl">{benefit.title}</h3>
                   </div>
-                  <p className="mt-4 text-xl font-medium text-slate-600 leading-relaxed text-center md:text-left">{benefit.description}</p>
+                  <p className="mt-4 text-lg font-medium text-slate-600 leading-relaxed text-center md:text-left md:text-xl">{benefit.description}</p>
                 </div>
                 
                 <div className="w-full relative rounded-2xl overflow-hidden shadow-xl flex-1 border border-white/40">

@@ -11,7 +11,7 @@ export function FinalSection({ ctaHref }: FinalSectionProps) {
     <SectionTracker sectionId="final">
       <section className="bg-gradient-to-b from-white to-slate-50 px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-6 text-4xl font-black tracking-tighter text-slate-900 md:text-6xl">
+          <h2 className="mb-6 text-3xl font-black tracking-tighter text-slate-900 md:text-6xl">
             Sua vida já acontece no WhatsApp.
             <br />
             Agora sua organização também.

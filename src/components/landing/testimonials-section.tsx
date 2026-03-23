@@ -55,7 +55,7 @@ export function TestimonialsSection() {
               <span className="text-yellow-400 text-lg tracking-tight">★★★★★</span>
               <span className="text-sm font-bold text-slate-500">4.9 · +1.200 usuários</span>
             </div>
-            <h2 className="text-center text-4xl font-black tracking-tighter text-slate-900 md:text-6xl mt-6">
+            <h2 className="text-center text-3xl font-black tracking-tighter text-slate-900 md:text-6xl mt-6">
               Veja o que as pessoas estão fazendo <br /> com as <span className="text-[#25d366]">2h extras.</span>
             </h2>
           </div>
@@ -63,7 +63,7 @@ export function TestimonialsSection() {
           {/* Depoimentos */}
           <div className="space-y-6">
             {testimonials.map((t, i) => (
-              <div key={i} className="flex gap-4 rounded-[2.5rem] bg-slate-50 p-8 ring-1 ring-slate-200 shadow-sm">
+              <div key={i} className="flex gap-4 rounded-[2.5rem] bg-slate-50 p-6 md:p-8 ring-1 ring-slate-200 shadow-sm">
                 <Image
                   src={t.image}
                   alt={t.name}

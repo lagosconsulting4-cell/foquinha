@@ -26,7 +26,7 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <h1 className="mb-6 text-4xl font-black tracking-tighter text-slate-900 md:text-5xl lg:text-6xl leading-[1.05]">
+            <h1 className="mb-6 text-3xl font-black tracking-tighter text-slate-900 md:text-5xl lg:text-6xl leading-[1.05]">
               Ganhe 2h extras por dia <br className="hidden md:block" />
               <span className="text-[#25d366]">organizando tudo no WhatsApp.</span>
             </h1>
@@ -57,7 +57,7 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
               href={ctaHref}
               label="Quero ganhar 2h por dia"
               trackingLocation="hero"
-              className="inline-flex w-full items-center justify-center rounded-2xl bg-[#25d366] px-12 py-6 text-xl font-bold text-white shadow-[0_20px_40px_-10px_rgba(37,211,102,0.4)] transition-all hover:scale-105 hover:bg-[#1DAA53] hover:-translate-y-1 sm:w-auto"
+              className="inline-flex w-full items-center justify-center rounded-2xl bg-[#25d366] px-8 py-4 text-lg font-bold text-white shadow-[0_20px_40px_-10px_rgba(37,211,102,0.4)] transition-all hover:scale-105 hover:bg-[#1DAA53] hover:-translate-y-1 sm:w-auto md:px-12 md:py-6 md:text-xl"
             />
           </div>
 
