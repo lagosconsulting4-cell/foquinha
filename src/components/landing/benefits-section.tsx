@@ -52,7 +52,7 @@ export function BenefitsSection() {
                     <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#25d366] text-white shadow-[0_10px_20px_-10px_rgba(37,211,102,0.3)] md:size-14 md:rounded-2xl">
                       <span className="text-lg font-black md:text-xl">{benefit.step}</span>
                     </div>
-                                        <h3 className="text-lg font-black tracking-tight text-slate-900 leading-tight md:text-4xl">{benefit.title}</h3>
+                    <h3 className="text-lg font-black tracking-tight text-slate-900 leading-tight md:text-4xl">{benefit.title}</h3>
                   </div>
                   <p className="mt-3 text-base font-medium text-slate-600 leading-relaxed text-center md:text-left md:text-xl md:mt-4">{benefit.description}</p>
                 </div>

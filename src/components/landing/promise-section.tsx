@@ -49,14 +49,14 @@ const metrics = [
 export function PromiseSection() {
   return (
     <SectionTracker sectionId="promise">
-      <section className="bg-[#F3EFE6] px-4 py-24 sm:px-6 lg:px-8 border-y border-[rgba(26,35,30,0.05)] relative overflow-hidden">
+      <section className="bg-[#F3EFE6] px-4 py-8 sm:px-6 md:py-16 lg:px-8 border-y border-[rgba(26,35,30,0.05)] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F6]/50 to-transparent pointer-events-none" />
         <div className="mx-auto max-w-5xl relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="mb-6 text-4xl font-bold tracking-tighter text-[#1A231E] md:text-5xl lg:text-6xl">
+          <div className="text-center mb-10 md:mb-20">
+            <h2 className="mb-4 text-2xl font-black tracking-tighter text-[#1A231E] md:text-5xl lg:text-5xl">
               O que você faz com 2h extras por dia?
             </h2>
-            <p className="mx-auto max-w-2xl text-xl font-medium text-[#4A6B56]">
+            <p className="mx-auto max-w-2xl text-base font-medium text-[#4A6B56] md:text-xl">
               Conquistas de verdade. Seu tempo de volta.{" "}
               <span className="font-bold text-[#1A231E]">Tudo no WhatsApp.</span>
             </p>
@@ -66,19 +66,19 @@ export function PromiseSection() {
             {metrics.map((metric, index) => (
               <div
                 key={index}
-                className="flex flex-col items-start rounded-[2.5rem] bg-white p-8 shadow-[0_30px_60px_-15px_rgba(26,35,30,0.1)] transition-transform hover:-translate-y-2 ring-1 ring-[#1A231E]/5"
+                className="flex flex-col items-center justify-center rounded-2xl bg-white p-4 shadow-[0_30px_60px_-15px_rgba(26,35,30,0.1)] transition-transform hover:-translate-y-2 ring-1 ring-[#1A231E]/5 md:p-8 md:rounded-[2.5rem]"
               >
-                <span className="text-5xl font-black tracking-tighter text-[#1A231E] leading-none sm:text-6xl">
+                <div className="text-3xl font-black tracking-tighter text-[#1A231E] leading-none md:text-6xl">
                   {metric.isAnimated ? (
                     <AnimatedCounter value={metric.value} />
                   ) : (
                     metric.value
                   )}
-                </span>
-                <span className="mt-2 text-sm font-bold text-[#4A6B56] sm:text-base">
+                </div>
+                <div className="mt-2 text-[10px] font-bold text-[#4A6B56] uppercase tracking-wider md:text-base">
                   {metric.label}
-                </span>
-                <div className="mt-4 h-1 w-12 rounded-full bg-[#25d366]" />
+                </div>
+                <div className="mt-4 h-1 w-10 rounded-full bg-[#25d366]" />
               </div>
             ))}
           </div>
