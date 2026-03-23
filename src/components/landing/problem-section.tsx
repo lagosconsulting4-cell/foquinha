@@ -28,7 +28,7 @@ export function ProblemSection() {
             </div>
 
             {/* 2 */}
-            <div className="flex flex-col items-center text-center p-6 bg-white rounded-[2rem] shadow-[0_10px_30px_-10px_rgba(15,23,42,0.05)] ring-1 ring-slate-900/5">
+            <div className="flex flex-col items-center text-center p-4 bg-white rounded-[1.5rem] shadow-[0_10px_30px_-10px_rgba(15,23,42,0.05)] ring-1 ring-slate-900/5 md:p-6 md:rounded-[2rem]">
               <div className="mb-4 flex size-12 items-center justify-center rounded-2xl bg-red-50 text-2xl md:mb-6 md:size-16 md:rounded-3xl md:text-3xl">❤️</div>
               <h3 className="mb-3 text-lg font-bold text-slate-900">Estar com quem importa</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
@@ -37,7 +37,7 @@ export function ProblemSection() {
             </div>
 
             {/* 3 */}
-            <div className="flex flex-col items-center text-center p-6 bg-white rounded-[2rem] shadow-[0_10px_30px_-10px_rgba(15,23,42,0.05)] ring-1 ring-slate-900/5">
+            <div className="flex flex-col items-center text-center p-4 bg-white rounded-[1.5rem] shadow-[0_10px_30px_-10px_rgba(15,23,42,0.05)] ring-1 ring-slate-900/5 md:p-6 md:rounded-[2rem]">
               <div className="mb-4 flex size-12 items-center justify-center rounded-2xl bg-blue-50 text-2xl md:mb-6 md:size-16 md:rounded-3xl md:text-3xl">🚀</div>
               <h3 className="mb-3 text-lg font-bold text-slate-900">Focar no que gera resultado</h3>
               <p className="text-slate-600 text-sm leading-relaxed">

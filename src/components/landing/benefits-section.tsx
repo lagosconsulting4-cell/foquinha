@@ -45,7 +45,7 @@ export function BenefitsSection() {
           {/* Mockups */}
           <div className="space-y-10">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex flex-col items-center justify-between text-center p-6 bg-slate-50 rounded-[2rem] mb-10 overflow-hidden md:flex-row md:text-left md:p-10 gap-10 ring-1 ring-slate-200 shadow-sm transition-all hover:shadow-md">
+              <div key={index} className="flex flex-col items-center justify-between text-center p-4 bg-slate-50 rounded-[1.5rem] mb-10 overflow-hidden md:flex-row md:text-left md:p-10 gap-10 ring-1 ring-slate-200 shadow-sm transition-all hover:shadow-md">
                 
                 <div className="flex-1 w-full scale-100">
                   <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">

@@ -26,23 +26,23 @@ export function PricingSection({ ctaHref, secondaryCtaHref }: PricingSectionProp
                 <div className="text-xs text-muted-foreground">por mês</div>
               </div>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg transition-all hover:shadow-xl">
+            <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-lg transition-all hover:shadow-xl md:p-6 md:rounded-2xl">
               <div className="text-center">
                 <div className="text-xl font-bold text-foreground">R$750</div>
                 <div className="mt-1 text-sm text-muted-foreground">Personal</div>
                 <div className="text-xs text-muted-foreground">por mês</div>
               </div>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg transition-all hover:shadow-xl">
+            <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-lg transition-all hover:shadow-xl md:p-6 md:rounded-2xl">
               <div className="text-center">
                 <div className="text-xl font-bold text-foreground">R$600</div>
                 <div className="mt-1 text-sm text-muted-foreground">Consultoria</div>
                 <div className="text-xs text-muted-foreground">por mês</div>
               </div>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg transition-all hover:shadow-xl">
+            <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-lg transition-all hover:shadow-xl md:p-6 md:rounded-2xl">
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground">R$150</div>
+                <div className="text-xl font-bold text-foreground">R$150</div>
                 <div className="mt-1 text-sm text-muted-foreground">Planner</div>
                 <div className="text-xs text-muted-foreground">físico</div>
               </div>

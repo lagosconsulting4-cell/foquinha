@@ -26,7 +26,7 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <h1 className="mb-4 text-xl font-black tracking-tighter text-slate-900 md:text-5xl lg:text-6xl leading-[1.05] md:mb-6">
+            <h1 className="mb-4 text-2xl font-black tracking-tighter text-slate-900 md:text-5xl lg:text-6xl leading-[1.05] md:mb-6">
               Ganhe 2h extras por dia <br className="hidden md:block" />
               <span className="text-[#25d366]">organizando tudo no WhatsApp.</span>
             </h1>
