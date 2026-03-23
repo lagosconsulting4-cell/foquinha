@@ -3,15 +3,15 @@ import { SectionTracker } from "@/components/analytics/section-tracker"
 export function ProblemSection() {
   return (
     <SectionTracker sectionId="problem">
-      <section className="bg-white py-8 px-4 sm:px-6 md:py-16 lg:px-8 rounded-t-[3rem] -mt-10 relative z-20">
+      <section className="bg-white py-8 px-4 sm:px-6 md:py-16 md:rounded-t-[3rem] md:-mt-10 relative z-20">
         <div className="mx-auto max-w-5xl">
 
           {/* Headline Aspiracional */}
           <div className="mb-16 text-center">
-            <h2 className="text-2xl font-bold tracking-tighter text-slate-900 md:text-5xl lg:text-6xl">
+            <h2 className="text-xl font-bold tracking-tighter text-slate-900 md:text-5xl lg:text-6xl">
               E se você tivesse 2 horas extras todo dia?
             </h2>
-            <p className="mt-4 text-lg font-medium text-[#25d366] md:text-2xl md:mt-6">
+            <p className="mt-4 text-base font-medium text-[#25d366] md:text-2xl md:mt-6">
               Pensa no que você poderia fazer:
             </p>
           </div>

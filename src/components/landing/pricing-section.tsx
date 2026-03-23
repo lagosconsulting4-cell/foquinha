@@ -15,27 +15,27 @@ export function PricingSection({ ctaHref, secondaryCtaHref }: PricingSectionProp
     <section className="py-8 md:py-24">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl text-center">
+          <h2 className="text-lg font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl text-center">
             💸 Quanto vale organizar sua vida de forma real?
           </h2>
-          <div className="mx-auto mt-8 grid max-w-2xl gap-4 sm:grid-cols-2 lg:grid-cols-4 md:mt-12 md:gap-6">
+          <div className="mx-auto mt-6 grid max-w-2xl gap-2 grid-cols-2 md:grid-cols-4 md:mt-12 md:gap-6">
             <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-lg transition-all hover:shadow-xl md:p-6 md:rounded-2xl">
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground">R$800</div>
+                <div className="text-xl font-bold text-foreground">R$800</div>
                 <div className="mt-1 text-sm text-muted-foreground">Nutricionista</div>
                 <div className="text-xs text-muted-foreground">por mês</div>
               </div>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg transition-all hover:shadow-xl">
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground">R$750</div>
+                <div className="text-xl font-bold text-foreground">R$750</div>
                 <div className="mt-1 text-sm text-muted-foreground">Personal</div>
                 <div className="text-xs text-muted-foreground">por mês</div>
               </div>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg transition-all hover:shadow-xl">
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground">R$600</div>
+                <div className="text-xl font-bold text-foreground">R$600</div>
                 <div className="mt-1 text-sm text-muted-foreground">Consultoria</div>
                 <div className="text-xs text-muted-foreground">por mês</div>
               </div>
@@ -63,7 +63,7 @@ export function PricingSection({ ctaHref, secondaryCtaHref }: PricingSectionProp
 
               <div className="space-y-3">
                 <div className="text-sm font-medium text-muted-foreground line-through">De R$29,00/mês</div>
-                                <div className="text-2xl font-bold text-foreground md:text-5xl">12x de R$ 9,00</div>
+                                <div className="text-xl font-bold text-foreground md:text-5xl">12x de R$ 9,00</div>
                 <div className="text-xl text-muted-foreground">ou R$87 por ano</div>
                 <div className="mx-auto w-16 h-1 bg-secondary rounded-full"></div>
               </div>
