@@ -7,12 +7,12 @@ export function ProblemSection() {
         <div className="mx-auto max-w-5xl">
 
           {/* Headline Aspiracional */}
-          <div className="mb-16 text-center">
-            <h2 className="text-2xl font-bold tracking-tighter text-slate-900 md:text-5xl lg:text-6xl">
-              E se você tivesse 2 horas extras todo dia?
+          <div className="mb-12 text-center">
+            <h2 className="text-2xl font-black tracking-tighter text-slate-900 md:text-5xl lg:text-6xl">
+              O que você faz com 2h <br className="md:hidden" /> extras por dia?
             </h2>
-            <p className="mt-4 text-base font-medium text-[#25d366] md:text-2xl md:mt-6">
-              Pensa no que você poderia fazer:
+            <p className="mt-4 text-base font-medium text-slate-600 md:text-2xl md:mt-6">
+              Conquistas de verdade. Seu tempo de volta. <br className="md:hidden" /> <span className="text-[#25d366] font-bold">Tudo no WhatsApp.</span>
             </p>
           </div>
 
