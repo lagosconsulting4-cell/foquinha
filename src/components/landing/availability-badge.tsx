@@ -10,9 +10,9 @@ import {
 } from "@/components/ui/carousel"
 
 const images = [
-    { src: "https://i.ibb.co/YFbPQDxt/2-site-Foquinha-3.png", alt: "Foquinha feature" },
-    { src: "https://i.ibb.co/pvFr8rkt/2-site-Foquinha-2.png", alt: "Foquinha feature" },
-    { src: "https://i.ibb.co/XkM9JdDJ/2-site-Foquinha-1.png", alt: "Foquinha feature" },
+    { src: "/feature1.png", alt: "Foquinha feature" },
+    { src: "/feature2.png", alt: "Foquinha feature" },
+    { src: "/feature3.png", alt: "Foquinha feature" },
 ]
 
 export function AvailabilityBadge() {

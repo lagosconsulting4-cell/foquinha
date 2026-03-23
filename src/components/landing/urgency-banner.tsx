@@ -25,7 +25,7 @@ export function UrgencyBanner({ ctaHref }: UrgencyBannerProps) {
 
         <a
           href={ctaHref}
-          className="group flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-wide text-[#128C7E] transition-all hover:scale-105 hover:bg-[#128C7E] hover:text-white hover:shadow-xl sm:px-6 sm:text-sm"
+          className="group flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-wide text-slate-900 transition-all hover:scale-105 hover:bg-slate-900 hover:text-white hover:shadow-xl sm:px-6 sm:text-sm"
         >
           <AlertCircle className="size-4 animate-pulse" />
           <span>GARANTIR VAGA</span>

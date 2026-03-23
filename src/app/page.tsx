@@ -4,7 +4,6 @@ import { useEffect } from 'react'
 import { HeroSection } from "@/components/landing/hero-section"
 import { ProblemSection } from "@/components/landing/problem-section"
 import { BenefitsSection } from "@/components/landing/benefits-section"
-import { AudioSection } from "@/components/landing/audio-section"
 import { PromiseSection } from "@/components/landing/promise-section"
 import { TestimonialsSection } from "@/components/landing/testimonials-section"
 import { AvailabilityBadge } from "@/components/landing/availability-badge"
@@ -28,7 +27,6 @@ export default function Home() {
         <HeroSection ctaHref={pricingAnchor} />
         <ProblemSection />
         <BenefitsSection />
-        <AudioSection />
         <PromiseSection />
         <TestimonialsSection />
         <AvailabilityBadge />

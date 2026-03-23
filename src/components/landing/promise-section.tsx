@@ -49,15 +49,16 @@ const metrics = [
 export function PromiseSection() {
   return (
     <SectionTracker sectionId="promise">
-      <section className="bg-gradient-to-b from-slate-50 to-white px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-5xl">
-          <div className="text-center mb-14">
-            <h2 className="mb-4 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
+      <section className="bg-[#F3EFE6] px-4 py-24 sm:px-6 lg:px-8 border-y border-[rgba(26,35,30,0.05)] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F6]/50 to-transparent pointer-events-none" />
+        <div className="mx-auto max-w-5xl relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="mb-6 text-4xl font-bold tracking-tighter text-[#1A231E] md:text-5xl lg:text-6xl">
               O que você faz com 2h extras por dia?
             </h2>
-            <p className="mx-auto max-w-2xl text-lg text-slate-500">
-              Conquistas reais. Tempo de volta.{" "}
-              <span className="font-semibold text-slate-700">Tudo no WhatsApp.</span>
+            <p className="mx-auto max-w-2xl text-xl font-medium text-[#4A6B56]">
+              Conquistas de verdade. Seu tempo de volta.{" "}
+              <span className="font-bold text-[#1A231E]">Tudo no WhatsApp.</span>
             </p>
           </div>
 
@@ -65,37 +66,30 @@ export function PromiseSection() {
             {metrics.map((metric, index) => (
               <div
                 key={index}
-                className="flex flex-col items-start rounded-2xl border border-slate-200/70 p-5"
-                style={{
-                  background:
-                    "linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(241,245,249,0.8) 100%)",
-                  boxShadow:
-                    "0 2px 20px -4px rgba(18,140,126,0.10), 0 1px 6px -2px rgba(0,0,0,0.05)",
-                  backdropFilter: "blur(8px)",
-                }}
+                className="flex flex-col items-start rounded-[2.5rem] bg-white p-8 shadow-[0_30px_60px_-15px_rgba(26,35,30,0.1)] transition-transform hover:-translate-y-2 ring-1 ring-[#1A231E]/5"
               >
-                <span className="text-4xl font-black text-slate-900 leading-none sm:text-5xl">
+                <span className="text-5xl font-black tracking-tighter text-[#1A231E] leading-none sm:text-6xl">
                   {metric.isAnimated ? (
                     <AnimatedCounter value={metric.value} />
                   ) : (
                     metric.value
                   )}
                 </span>
-                <span className="mt-1.5 text-xs font-medium text-slate-500 sm:text-sm">
+                <span className="mt-2 text-sm font-bold text-[#4A6B56] sm:text-base">
                   {metric.label}
                 </span>
-                <div className="mt-3 h-0.5 w-8 rounded-full bg-secondary" />
+                <div className="mt-4 h-1 w-12 rounded-full bg-[#25d366]" />
               </div>
             ))}
           </div>
 
           {/* Banner 2h */}
           <div className="mx-auto mt-10 max-w-3xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3 shadow-lg">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#2A3630] px-6 py-3 shadow-[0_10px_30px_-10px_rgba(34,42,38,0.2)]">
               <span className="text-xl">⏰</span>
               <p className="text-sm font-medium text-white sm:text-base">
                 2h/dia &nbsp;·&nbsp; 730h/ano &nbsp;·&nbsp;{" "}
-                <strong className="text-secondary">30 dias inteiros de volta</strong>
+                <strong className="text-[#25D366]">30 dias inteiros de volta</strong>
               </p>
             </div>
           </div>

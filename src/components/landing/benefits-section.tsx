@@ -4,40 +4,22 @@ import { SectionTracker } from "@/components/analytics/section-tracker"
 const benefits = [
   {
     step: "1",
-    title: 'Manda um "Oi" no WhatsApp',
-    description: "Começa na hora. Sem criar conta, sem baixar nada.",
-    image: "https://i.ibb.co/whfjxxX8/Telas-Foquinha-1200-x-750-px-6.png",
+    title: 'Mande um "oi"',
+    description: "Escreva ou fale o que você precisa lembrar, do seu jeito.",
+    image: "/benefit_new1.jpg",
   },
   {
     step: "2",
-    title: "Conta o que precisa lembrar",
-    description: "Consultas, tarefas, reuniões — ela organiza tudo.",
-    image: "https://i.ibb.co/v4X7wb9X/Telas-Foquinha-1200-x-750-px-7.png",
+    title: "É só isso :)",
+    description: "Ela entende, prioriza e anota na hora.",
+    image: "/benefit_new2.jpg",
   },
   {
     step: "3",
-    title: "Recebe sua agenda direto no zap",
-    description: "Lista clara com horários e prioridades.",
-    image: "https://i.ibb.co/9kdmVsMs/Plano-personalizado.webp",
-  },
-  {
-    step: "4",
-    title: "Lembretes na hora certa",
-    description: "Avisos curtos no momento certo.",
-    image: "https://i.ibb.co/8nFZHgf8/Telas-Foquinha-1200-x-750-px-8.png",
-  },
-  {
-    step: "5",
-    title: "Mudou o dia? Ela reorganiza",
-    description: "Atrasou ou surgiu algo? Ela redistribui automaticamente.",
-    image: "https://i.ibb.co/ZRKFpdV9/Reorganiza-quando-preciso.webp",
-  },
-  {
-    step: "6",
-    title: "Resumo semanal",
-    description: "Veja o que fez e o que ficou pendente.",
-    image: "https://i.ibb.co/RTrL3N3m/Relatorio.webp",
-  },
+    title: "Agora é com ela",
+    description: "Ela te avisa na hora certa, direto no seu zap.",
+    image: "/benefit_new3.jpg",
+  }
 ] as const
 
 const rows = [
@@ -50,74 +32,46 @@ const rows = [
 export function BenefitsSection() {
   return (
     <SectionTracker sectionId="benefits">
-      <section style={{ backgroundColor: "#F0F9F1" }} className="px-4 pb-14 pt-10 sm:px-6">
-        <div className="mx-auto max-w-lg">
+      <section id="funciona" className="bg-white py-16 px-4 sm:px-6 lg:px-8 border-t border-[rgba(26,35,30,0.05)]">
+        <div className="mx-auto max-w-5xl">
 
           {/* Headline */}
-          <div className="mb-10 text-center">
-            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
-              Como a Foquinha te devolve 2h por dia?
+          <div className="mb-16 text-center">
+            <h2 className="text-4xl font-black tracking-tighter text-slate-900 md:text-6xl">
+              Organizar sua vida <br /> <span className="text-[#25d366]">nunca foi tão fácil.</span>
             </h2>
           </div>
 
           {/* Mockups */}
-          <div className="space-y-12">
+          <div className="space-y-10">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className="mb-4 flex size-9 items-center justify-center rounded-full bg-secondary text-white shadow-sm">
-                  <span className="text-sm font-bold">{benefit.step}</span>
+              <div key={index} className="flex flex-col items-center justify-between text-center p-6 bg-slate-50 rounded-[2rem] mb-10 overflow-hidden md:flex-row md:text-left md:p-10 gap-10 ring-1 ring-slate-200 shadow-sm transition-all hover:shadow-md">
+                
+                <div className="flex-1 w-full scale-100">
+                  <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
+                    <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-[#25d366] text-white shadow-[0_10px_20px_-10px_rgba(37,211,102,0.3)]">
+                      <span className="text-xl font-black">{benefit.step}</span>
+                    </div>
+                    <h3 className="text-2xl font-black tracking-tight text-slate-900 leading-tight md:text-4xl">{benefit.title}</h3>
+                  </div>
+                  <p className="mt-4 text-xl font-medium text-slate-600 leading-relaxed text-center md:text-left">{benefit.description}</p>
                 </div>
-                <div className="mb-4 w-full">
+                
+                <div className="w-full relative rounded-2xl overflow-hidden shadow-xl flex-1 border border-white/40">
                   <Image
                     src={benefit.image}
                     alt={benefit.title}
                     width={600}
                     height={900}
-                    className="w-full object-contain drop-shadow-md"
+                    className="w-full object-cover scale-105"
                     loading={index < 2 ? "eager" : "lazy"}
                   />
                 </div>
-                <h3 className="text-base font-bold text-slate-900">{benefit.title}</h3>
-                <p className="mt-1 text-sm text-slate-500">{benefit.description}</p>
               </div>
             ))}
           </div>
 
-          {/* A conta */}
-          <div className="mt-14">
-            <div className="mb-3 grid grid-cols-[1fr_5rem_5rem] gap-x-2 px-2">
-              <span />
-              <span className="text-center text-[10px] font-bold uppercase tracking-widest text-red-400">Antes</span>
-              <span className="text-center text-[10px] font-bold uppercase tracking-widest text-secondary">Com Foquinha</span>
-            </div>
-
-            <div className="divide-y divide-slate-100 rounded-2xl border border-slate-200/60 bg-white overflow-hidden">
-              {rows.map((row, i) => (
-                <div key={i} className="grid grid-cols-[1fr_5rem_5rem] items-center gap-x-2 px-4 py-3">
-                  <div className="flex items-center gap-2">
-                    <span className="text-base">{row.emoji}</span>
-                    <span className="text-xs font-medium text-slate-700">{row.label}</span>
-                  </div>
-                  <span className="text-center text-xs font-bold text-red-500">{row.without}</span>
-                  <span className="text-center text-sm text-secondary font-bold">✓</span>
-                </div>
-              ))}
-              <div className="grid grid-cols-[1fr_5rem_5rem] items-center gap-x-2 bg-slate-50 px-4 py-3.5">
-                <span className="text-xs font-bold text-slate-700">Total</span>
-                <span className="text-center text-sm font-black text-red-500">90 min</span>
-                <span className="text-center text-sm font-black text-secondary">10 seg</span>
-              </div>
-            </div>
-
-            {/* Resultado */}
-            <div className="mt-4 text-center">
-              <div className="inline-flex flex-col items-center gap-0.5 rounded-full bg-secondary px-6 py-3">
-                <span className="text-[11px] font-medium text-black/60">Você economiza</span>
-                <span className="text-lg font-black text-slate-900">~2h por dia</span>
-              </div>
-              <p className="mt-2 text-xs text-slate-400">= 730h/ano = 30 dias inteiros de volta</p>
-            </div>
-          </div>
+          {/* Removed Table */}
 
         </div>
       </section>

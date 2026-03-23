@@ -7,44 +7,24 @@ import { cn } from "@/lib/utils"
 
 const faqs = [
   {
-    question: "Como funciona a Foquinha IA no WhatsApp?",
+    question: "Preciso baixar algum aplicativo?",
     answer:
-      "Você adiciona o número da Foquinha no WhatsApp e ela conversa com você de forma natural. Ela entende seus objetivos, monta um plano personalizado e envia lembretes diários. Tudo direto no app que você já usa todo dia.",
+      "Não! A Foquinha vive direto no seu WhatsApp. É só salvar o número e começar a mandar mensagens ou áudios.",
   },
   {
-    question: "Preciso ter conhecimento técnico pra usar?",
+    question: "É difícil de mexer?",
     answer:
-      "Não! Se você sabe usar WhatsApp, você sabe usar a Foquinha. É só conversar normalmente, como você faz com seus amigos. Ela entende português brasileiro e se adapta ao seu jeito de falar.",
+      "Se você sabe mandar um áudio no Zap, você sabe usar a Foquinha. Ela entende o jeito que você fala, mesmo que a mensagem seja bagunçada.",
   },
   {
-    question: "E se eu não tiver tempo pra treinar todos os dias?",
+    question: "Posso cancelar se não gostar?",
     answer:
-      "A Foquinha cria rotinas realistas baseadas no tempo que VOCÊ TEM. Se você só consegue 15 minutos, ela monta treinos de 15 minutos. Ela se adapta à sua realidade, não o contrário.",
+      "Claro! Você tem 7 dias de garantia incondicional. Se não salvar pelo menos 2h do seu dia, nós devolvemos 100% do seu dinheiro, sem burocracia.",
   },
   {
-    question: "Funciona pra quem nunca conseguiu manter rotina?",
+    question: "A Foquinha entende áudios longos?",
     answer:
-      "Sim! A Foquinha foi criada justamente pra isso. Ela não te cobra, ela te lembra. Ela reorganiza quando você perde um dia. O foco é constância leve, não perfeição impossível. Mais de 80% dos usuários mantêm a rotina após 30 dias.",
-  },
-  {
-    question: "Posso cancelar quando quiser?",
-    answer:
-      "Sim, sem burocracia. Você tem 7 dias de garantia pra testar. Se não gostar, é só pedir o dinheiro de volta. E pode cancelar a qualquer momento depois, sem taxas ou penalidades.",
-  },
-  {
-    question: "A Foquinha substitui nutricionista ou personal trainer?",
-    answer:
-      "Não substitui profissionais de saúde. A Foquinha é uma assistente de organização e hábitos que oferece sugestões gerais. Se você tem condições de saúde específicas, sempre consulte um profissional.",
-  },
-  {
-    question: "Quantas vezes por dia a Foquinha me envia mensagem?",
-    answer:
-      "Você controla! A Foquinha envia lembretes nos horários que você definir (geralmente 2-3 por dia). Você pode ajustar a frequência a qualquer momento. Nada de spam ou mensagens demais.",
-  },
-  {
-    question: "Meus dados estão seguros?",
-    answer:
-      "Sim! Todas as conversas são criptografadas pelo WhatsApp. Não vendemos, compartilhamos ou usamos seus dados pessoais pra nada além de melhorar sua experiência com a Foquinha. Sua privacidade é prioridade.",
+      "Sim. Você pode mandar um áudio longo de 2 minutos desabafando sobre tudo que tem pra fazer, e ela vai extrair perfeitamente suas tarefas e horários e organizar pra você.",
   },
 ]
 

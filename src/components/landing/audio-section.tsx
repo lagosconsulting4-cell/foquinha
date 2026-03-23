@@ -21,7 +21,7 @@ export function AudioSection() {
             <div className="flex-1 w-full flex justify-center">
               <div className="relative w-full max-w-[320px] rounded-3xl overflow-hidden shadow-xl border-4 border-white/40 ring-1 ring-slate-100">
                 <Image
-                  src="https://i.ibb.co/tp9rDY3k/Whats-App-Image-2026-03-20-at-15-38-19.jpg"
+                  src="/audio_feature.jpg"
                   alt="Simulação de uso de áudio na Foquinha via WhatsApp"
                   width={320}
                   height={693}
