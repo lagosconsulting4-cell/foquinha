@@ -57,7 +57,7 @@ export function HeroSection({ ctaHref }: HeroSectionProps) {
               href={ctaHref}
               label="Quero ganhar 2h por dia"
               trackingLocation="hero"
-              className="inline-flex w-full items-center justify-center rounded-2xl bg-[#25d366] px-8 py-4 text-lg font-bold text-white shadow-[0_20px_40px_-10px_rgba(37,211,102,0.4)] transition-all hover:scale-105 hover:bg-[#1DAA53] hover:-translate-y-1 sm:w-auto md:px-12 md:py-6 md:text-xl"
+              className="inline-flex w-full items-center justify-center rounded-xl bg-[#25d366] px-6 py-4 text-base font-bold text-white shadow-[0_20px_40px_-10px_rgba(37,211,102,0.4)] transition-all hover:scale-105 hover:bg-[#1DAA53] hover:-translate-y-1 sm:w-auto md:px-12 md:py-6 md:text-xl md:rounded-2xl"
             />
           </div>
 

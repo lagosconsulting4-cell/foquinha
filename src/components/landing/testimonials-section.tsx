@@ -55,7 +55,7 @@ export function TestimonialsSection() {
               <span className="text-yellow-400 text-lg tracking-tight">★★★★★</span>
               <span className="text-sm font-bold text-slate-500">4.9 · +1.200 usuários</span>
             </div>
-            <h2 className="text-center text-xl font-black tracking-tighter text-slate-900 md:text-6xl mt-4 md:mt-6">
+            <h2 className="text-center text-2xl font-black tracking-tighter text-slate-900 md:text-6xl mt-4 md:mt-6">
               Veja o que as pessoas estão fazendo <br /> com as <span className="text-[#25d366]">2h extras.</span>
             </h2>
           </div>

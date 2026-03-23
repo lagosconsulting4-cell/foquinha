@@ -15,32 +15,32 @@ export function PricingSection({ ctaHref, secondaryCtaHref }: PricingSectionProp
     <section className="py-8 md:py-24">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl text-center">
+          <h2 className="text-2xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl text-center">
             💸 Quanto vale organizar sua vida de forma real?
           </h2>
           <div className="mx-auto mt-6 grid max-w-2xl gap-2 grid-cols-2 md:grid-cols-4 md:mt-12 md:gap-6">
-            <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-lg transition-all hover:shadow-xl md:p-6 md:rounded-2xl">
+            <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-lg transition-all hover:shadow-xl md:p-6 md:rounded-2xl">
               <div className="text-center">
                 <div className="text-xl font-bold text-foreground">R$800</div>
                 <div className="mt-1 text-sm text-muted-foreground">Nutricionista</div>
                 <div className="text-xs text-muted-foreground">por mês</div>
               </div>
             </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-lg transition-all hover:shadow-xl md:p-6 md:rounded-2xl">
+            <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-lg transition-all hover:shadow-xl md:p-6 md:rounded-2xl">
               <div className="text-center">
                 <div className="text-xl font-bold text-foreground">R$750</div>
                 <div className="mt-1 text-sm text-muted-foreground">Personal</div>
                 <div className="text-xs text-muted-foreground">por mês</div>
               </div>
             </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-lg transition-all hover:shadow-xl md:p-6 md:rounded-2xl">
+            <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-lg transition-all hover:shadow-xl md:p-6 md:rounded-2xl">
               <div className="text-center">
                 <div className="text-xl font-bold text-foreground">R$600</div>
                 <div className="mt-1 text-sm text-muted-foreground">Consultoria</div>
                 <div className="text-xs text-muted-foreground">por mês</div>
               </div>
             </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-lg transition-all hover:shadow-xl md:p-6 md:rounded-2xl">
+            <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-lg transition-all hover:shadow-xl md:p-6 md:rounded-2xl">
               <div className="text-center">
                 <div className="text-xl font-bold text-foreground">R$150</div>
                 <div className="mt-1 text-sm text-muted-foreground">Planner</div>
@@ -100,7 +100,7 @@ export function PricingSection({ ctaHref, secondaryCtaHref }: PricingSectionProp
               <CtaButton
                 href={ctaHref}
                 label="🚀 SIM! QUERO COMEÇAR AGORA COM 70% OFF"
-                className="w-full flex-wrap whitespace-normal rounded-2xl bg-secondary px-6 py-5 text-center text-xs font-bold uppercase leading-tight tracking-wide text-white hover:scale-105 hover:bg-secondary/90 shadow-2xl shadow-secondary/20 transition-all duration-300 sm:text-sm"
+                className="w-full flex-wrap whitespace-normal rounded-xl bg-secondary px-6 py-4 text-center text-[10px] font-bold uppercase leading-tight tracking-wide text-white hover:scale-105 hover:bg-secondary/90 shadow-2xl shadow-secondary/20 transition-all duration-300 sm:text-xs md:text-sm md:rounded-2xl md:px-8 md:py-6"
               />
 
               <Separator className="bg-slate-200" />

@@ -11,7 +11,7 @@ export function SecuritySection() {
             <span className="text-sm font-black tracking-widest text-slate-800 uppercase">Sua privacidade em primeiro lugar</span>
           </div>
           
-          <h2 className="mb-4 text-xl font-black tracking-tighter text-slate-900 md:text-6xl md:mb-6">Seus dados estão <br /> <span className="text-[#25d366]">100% seguros.</span></h2>
+          <h2 className="mb-4 text-2xl font-black tracking-tighter text-slate-900 md:text-6xl md:mb-6">Seus dados estão <br /> <span className="text-[#25d366]">100% seguros.</span></h2>
           <p className="mx-auto mb-10 max-w-2xl text-base font-medium text-slate-500 md:text-xl md:mb-16">Utilizamos criptografia de ponta a ponta e os mais altos padrões de segurança. Seu foco é nossa única prioridade.</p>
 
           <div className="grid gap-8 md:grid-cols-3">
@@ -20,12 +20,12 @@ export function SecuritySection() {
               { icon: <ShieldCheck className="size-6 text-[#25d366]" />, title: "Privacidade", desc: "Seus dados são apenas seus e de mais ninguém" },
               { icon: <EyeOff className="size-6 text-[#25d366]" />, title: "Controle", desc: "Exclua suas conversas e dados quando quiser" }
             ].map((item, i) => (
-              <div key={i} className="group relative flex flex-col items-center text-center rounded-[1.5rem] bg-white p-4 shadow-[0_20px_40px_-15px_rgba(26,35,30,0.05)] ring-1 ring-slate-100 transition-all hover:scale-[1.02] hover:shadow-[0_40px_80px_-20px_rgba(26,35,30,0.1)] md:rounded-[2.5rem] md:p-10">
-                <div className="mb-8 flex size-12 items-center justify-center rounded-3xl bg-slate-50 transition-colors group-hover:bg-[#25d366]/10 md:size-16">
+              <div key={i} className="group relative flex flex-col items-center text-center rounded-2xl bg-white p-4 shadow-[0_20px_40px_-15px_rgba(26,35,30,0.05)] ring-1 ring-slate-100 transition-all hover:scale-[1.02] hover:shadow-[0_40px_80px_-20px_rgba(26,35,30,0.1)] md:rounded-[2.5rem] md:p-10">
+                <div className="mb-8 flex size-12 items-center justify-center rounded-xl bg-slate-50 transition-colors group-hover:bg-[#25d366]/10 md:size-16 md:rounded-3xl">
                   {item.icon}
                 </div>
-                <h3 className="mb-3 text-xl font-black text-slate-900">{item.title}</h3>
-                <p className="text-base font-medium text-slate-500 leading-relaxed">{item.desc}</p>
+                <h3 className="mb-3 text-lg font-black text-slate-900 md:text-xl">{item.title}</h3>
+                <p className="text-sm font-medium text-slate-500 leading-relaxed md:text-base">{item.desc}</p>
               </div>
             ))}
           </div>
