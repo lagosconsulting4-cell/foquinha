@@ -11,7 +11,7 @@ export function SecuritySection() {
             <span className="text-sm font-black tracking-widest text-slate-800 uppercase">Sua privacidade em primeiro lugar</span>
           </div>
           
-          <h2 className="mb-4 text-2xl font-black tracking-tighter text-slate-900 md:text-6xl md:mb-6">Seus dados estão <br /> <span className="text-[#25d366]">100% seguros.</span></h2>
+          <h2 className="mb-4 text-xl font-black tracking-tighter text-slate-900 md:text-6xl md:mb-6">Seus dados estão <br /> <span className="text-[#25d366]">100% seguros.</span></h2>
           <p className="mx-auto mb-10 max-w-2xl text-base font-medium text-slate-500 md:text-xl md:mb-16">Utilizamos criptografia de ponta a ponta e os mais altos padrões de segurança. Seu foco é nossa única prioridade.</p>
 
           <div className="grid gap-8 md:grid-cols-3">

@@ -15,7 +15,7 @@ export function PricingSection({ ctaHref, secondaryCtaHref }: PricingSectionProp
     <section className="py-8 md:py-24">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-lg font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl text-center">
+          <h2 className="text-xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl text-center">
             💸 Quanto vale organizar sua vida de forma real?
           </h2>
           <div className="mx-auto mt-6 grid max-w-2xl gap-2 grid-cols-2 md:grid-cols-4 md:mt-12 md:gap-6">
